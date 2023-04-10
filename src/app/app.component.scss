@@ -1,0 +1,61 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  .cell {
+    background: red;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+  
+    span {
+      background: blue;
+      padding: 0px 8px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding: 16px 12px;
+  box-sizing: border-box;
+
+  .content {
+    width: 12.5%;
+    padding: 4px;
+    box-sizing: border-box;
+
+    &.w2 {
+      width: 25%;
+    }
+  }
+
+  .cell {
+    width: 100%;
+    background: green;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+
+    &.double {
+      width: 25%;
+    }
+  
+    span {
+      background: gold;
+      color: black;
+      padding: 0px 8px;
+      border-radius: 8px;
+    }
+  }
+}

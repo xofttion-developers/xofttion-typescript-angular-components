@@ -1,0 +1,17 @@
+# Folders
+.angular
+.github
+.vscode
+node_modules
+test
+
+# Files
+.eslintignore
+.eslintrc.json
+.gitignore
+.prettierrc
+.prettierignore
+karma.conf.js
+tsconfig.lib.json
+tsconfig.lib.prod.json
+tsconfig.spec.json

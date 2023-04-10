@@ -1,0 +1,62 @@
+{
+  "name": "@xofttion/angular-components",
+  "version": "14.0.0",
+  "private": false,
+  "scripts": {
+    "server:dev": "ng serve",
+    "build:app": "ng build",
+    "test:app": "ng test",
+    "test": "ng test @xofttion/angular-components",
+    "build": "ng-packagr -p projects/ng-package.json",
+    "publish": "npm run build && cd dist && npm publish",
+    "lint:ts": "eslint . --ext .ts",
+    "prettier": "npx prettier --write ."
+  },
+  "dependencies": {
+    "@angular/animations": "~14.2.4",
+    "@angular/cdk": "^14.2.3",
+    "@angular/common": "~14.2.4",
+    "@angular/compiler": "~14.2.4",
+    "@angular/core": "~14.2.4",
+    "@angular/forms": "~14.2.4",
+    "@angular/platform-browser": "~14.2.4",
+    "@angular/platform-browser-dynamic": "~14.2.4",
+    "@xofttion/utils": "^4.9.7",
+    "async": "^3.2.3",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.4",
+    "@angular/cli": "~14.2.4",
+    "@angular/compiler-cli": "~14.2.4",
+    "@angular/router": "~14.2.4",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "@xofttion/types": "^4.9.1",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jasmine-core": "~4.0.0",
+    "karma": "^6.3.17",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage": "~2.1.0",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^4.0.2",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "karma-nyan-reporter": "^0.2.5",
+    "ng-packagr": "^14.2.1",
+    "prettier": "^2.6.1",
+    "typescript": "^4.8.4"
+  },
+  "exports": {
+    "./styles": {
+      "sass": "./src/assets/styles.scss"
+    }
+  }
+}
