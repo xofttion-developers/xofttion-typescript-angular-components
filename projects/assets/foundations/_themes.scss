@@ -1,0 +1,68 @@
+/*!
+ * Xofttion Themes Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 03/Mar/2022
+ * Updated: 11/Abr/2023
+*/
+
+:root {
+  --background-mode-500: var(--color-light-500);
+
+  --background-mode-400: var(--color-light-400);
+
+  --background-mode-300: var(--color-light-300);
+
+  --background-mode-100: var(--color-light-100);
+
+  --color-mode-500: var(--color-dark-500);
+
+  --color-mode-300: var(--color-dark-300);
+
+  --color-mode-100: var(--color-dark-100);
+}
+
+*[xft-mode='dark'] {
+  --background-mode-500: var(--color-dark-500);
+
+  --background-mode-400: var(--color-dark-400);
+
+  --background-mode-300: var(--color-dark-300);
+
+  --background-mode-100: var(--color-dark-100);
+
+  --color-mode-500: var(--color-light-500);
+
+  --color-mode-300: var(--color-light-300);
+
+  --color-mode-100: var(--color-light-100);
+}
+
+.font-mode-500 {
+  color: var(--color-mode-500);
+}
+
+.font-mode-300 {
+  color: var(--color-mode-300);
+}
+
+.font-mode-100 {
+  color: var(--color-mode-100);
+}
+
+.bg-mode-500 {
+  background: var(--color-mode-500);
+}
+
+.bg-mode-400 {
+  background: var(--color-mode-400);
+}
+
+.bg-mode-300 {
+  background: var(--color-mode-300);
+}
+
+.bg-mode-100 {
+  background: var(--color-mode-100);
+}
