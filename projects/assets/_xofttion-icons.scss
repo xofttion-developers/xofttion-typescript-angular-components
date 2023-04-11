@@ -9,18 +9,18 @@
 
 @font-face {
   font-family: -xofttion-icons;
-  src: url('xofttion-icons.eot?9iewo3');
-  src: url('xofttion-icons.eot?9iewo3#iefix') format('embedded-opentype'),
-    url('xofttion-icons.ttf?9iewo3') format('truetype'),
-    url('xofttion-icons.woff?9iewo3') format('woff'),
-    url('xofttion-icons.svg?9iewo3#icomoon') format('svg');
+  src: url('icons/xofttion-icons.eot?9iewo3');
+  src: url('icons/xofttion-icons.eot?9iewo3#iefix') format('embedded-opentype'),
+    url('icons/xofttion-icons.ttf?9iewo3') format('truetype'),
+    url('icons/xofttion-icons.woff?9iewo3') format('woff'),
+    url('icons/xofttion-icons.svg?9iewo3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 [class^='xft-icon-'],
-[class*=' xft-icon-'] {
+[class*='xft-icon-'] {
   font-family: -xofttion-icons !important;
   font-style: normal;
   font-weight: normal;
