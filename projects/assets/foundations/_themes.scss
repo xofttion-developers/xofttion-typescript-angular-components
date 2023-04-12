@@ -8,35 +8,43 @@
 */
 
 :root {
-  --background-mode-500: var(--color-light-500);
+  --background-mode-500: var(--background-light-500);
 
-  --background-mode-400: var(--color-light-400);
+  --background-mode-300: var(--background-light-300);
 
-  --background-mode-300: var(--color-light-300);
-
-  --background-mode-100: var(--color-light-100);
+  --background-mode-100: var(--background-light-100);
 
   --color-mode-500: var(--color-dark-500);
 
   --color-mode-300: var(--color-dark-300);
 
   --color-mode-100: var(--color-dark-100);
+
+  --border-1-mode-500: var(--border-1) solid var(--border-dark-500);
+
+  --border-2-mode-500: var(--border-2) solid var(--border-dark-500);
+
+  --border-4-mode-500: var(--border-4) solid var(--border-dark-500);
 }
 
 *[xft-mode='dark'] {
-  --background-mode-500: var(--color-dark-500);
+  --background-mode-500: var(--background-dark-500);
 
-  --background-mode-400: var(--color-dark-400);
+  --background-mode-300: var(--background-dark-300);
 
-  --background-mode-300: var(--color-dark-300);
-
-  --background-mode-100: var(--color-dark-100);
+  --background-mode-100: var(--background-dark-100);
 
   --color-mode-500: var(--color-light-500);
 
   --color-mode-300: var(--color-light-300);
 
   --color-mode-100: var(--color-light-100);
+
+  --border-1-mode-500: var(--border-1) solid var(--border-light-500);
+
+  --border-2-mode-500: var(--border-2) solid var(--border-light-500);
+
+  --border-4-mode-500: var(--border-4) solid var(--border-light-500);
 }
 
 .font-mode-500 {
@@ -52,17 +60,25 @@
 }
 
 .bg-mode-500 {
-  background: var(--color-mode-500);
-}
-
-.bg-mode-400 {
-  background: var(--color-mode-400);
+  background: var(--background-mode-500);
 }
 
 .bg-mode-300 {
-  background: var(--color-mode-300);
+  background: var(--background-mode-300);
 }
 
 .bg-mode-100 {
-  background: var(--color-mode-100);
+  background: var(--background-mode-100);
+}
+
+.border-1-mode-500 {
+  border: var(--border-1-mode-500);
+}
+
+.border-2-mode-500 {
+  border: var(--border-2-mode-500);
+}
+
+.border-4-mode-500 {
+  border: var(--border-4-mode-500);
 }

@@ -4,27 +4,37 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 03/Mar/2022
- * Updated: 12/Ago/2022
+ * Updated: 12/Abr/2023
 */
 
 :root {
-  /** Colors darker */
-  --color-dark-500: rgba(37, 38, 65, 1);
+  --background-dark-500: rgba(37, 38, 65, 1);
 
-  --color-dark-400: rgba(52, 57, 87, 1);
+  --background-dark-300: rgba(52, 57, 87, 1);
+
+  --background-dark-100: rgba(72, 77, 107, 1);
+
+  --color-dark-500: rgba(37, 38, 65, 1);
 
   --color-dark-300: rgba(85, 95, 131, 1);
 
   --color-dark-100: rgba(148, 161, 210, 1);
 
-  /** Colors lighter */
+  --border-dark-500: rgba(173, 186, 230, 1);
+
+  --background-light-500: rgba(255, 255, 255, 1);
+
+  --background-light-300: rgba(239, 242, 252, 1);
+
+  --background-light-100: rgba(226, 228, 242, 1);
+
   --color-light-500: rgba(255, 255, 255, 1);
-  
-  --color-light-400: rgba(239, 242, 252, 1);
 
   --color-light-300: rgba(185, 195, 231, 1);
 
   --color-light-100: rgba(128, 141, 190, 1);
+
+  --border-light-500: rgba(242, 242, 242, 1);
 }
 
 .font-dark-500 {
@@ -52,25 +62,25 @@
 }
 
 .bg-dark-500 {
-  background: var(--color-dark-500);
+  background: var(--background-dark-500);
 }
 
 .bg-dark-300 {
-  background: var(--color-dark-300);
+  background: var(--background-dark-300);
 }
 
 .bg-dark-100 {
-  background: var(--color-dark-100);
+  background: var(--background-dark-100);
 }
 
 .bg-light-500 {
-  background: var(--color-light-500);
+  background: var(--background-light-500);
 }
 
 .bg-light-300 {
-  background: var(--color-light-300);
+  background: var(--background-light-300);
 }
 
 .bg-light-100 {
-  background: var(--color-light-100);
+  background: var(--background-light-100);
 }
