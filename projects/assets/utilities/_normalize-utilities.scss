@@ -1,5 +1,5 @@
 /**
- * Xofttion Normalize Styles
+ * Xofttion Normalize Utilities
  * v1.0.0
  * Author: Daniel Andrés Castillo Pedroza
  * Created: 11/Ago/2022
@@ -25,6 +25,7 @@ body {
   margin: 0rem;
   padding: 0rem;
   -webkit-tap-highlight-color: transparent;
+  background: var(--background-mode-300);
 }
 
 div {
@@ -41,7 +42,7 @@ video {
 
 audio:not([controls]) {
   display: none;
-  height: 0;
+  height: 0rem;
 }
 
 b,
@@ -50,7 +51,7 @@ strong {
 }
 
 img {
-  border: 0;
+  border: 0rem;
 }
 
 svg:not(:root) {
@@ -62,8 +63,8 @@ figure {
 }
 
 hr {
-  height: 1px;
-  border-width: 0;
+  height: 0.0625rem;
+  border-width: 0rem;
   box-sizing: content-box;
 }
 
@@ -95,14 +96,14 @@ textarea {
 }
 
 textarea::placeholder {
-  padding-left: 2px;
+  padding-left: 0.125rem;
 }
 
 form,
 input,
 optgroup,
 select {
-  margin: 0;
+  margin: 0rem;
   font: inherit;
   color: inherit;
 }
@@ -139,8 +140,8 @@ button ion-label {
 }
 
 button {
-  border: 0;
-  border-radius: 0;
+  border: 0rem;
+  border-radius: 0rem;
   font-family: inherit;
   font-style: inherit;
   font-variant: inherit;
@@ -160,13 +161,13 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+  padding: 0rem;
+  border: 0rem;
 }
 
 input[type='checkbox'],
 input[type='radio'] {
-  padding: 0;
+  padding: 0rem;
   box-sizing: border-box;
 }
 
@@ -182,12 +183,12 @@ input[type='search']::-webkit-search-decoration {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0rem;
 }
 
 td,
 th {
-  padding: 0;
+  padding: 0rem;
 }
 
 ul {
@@ -206,5 +207,5 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0rem;
 }

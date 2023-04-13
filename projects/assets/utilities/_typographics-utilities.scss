@@ -1,68 +1,54 @@
 /**
- * Xofttion Typographics Foundations
+ * Xofttion Typographics Utilities
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 13/Ago/2022
+ * Updated: 13/Abr/2023
 */
 
-:root {
-  --font-weight-thin: 100;
-
-  --font-weight-extra-light: 200;
-  
-  --font-weight-light: 300;
-
-  --font-weight-regular: 400;
-
-  --font-weight-medium: 500;
-
-  --font-weight-semibold: 600;
-
-  --font-weight-bold: 700;
-
-  --font-weight-extrabold: 800;
-
-  --font-weight-black: 900;
-}
-
-h1, .h1-default {
+h1,
+.h1-default {
   font-size: var(--heading-1-size);
   letter-spacing: var(--heading-1-letter-spacing);
   min-height: var(--heading-1-line-height);
   line-height: var(--heading-1-line-height);
 }
 
-h2, .h2-default {
+h2,
+.h2-default {
   font-size: var(--heading-2-size);
   letter-spacing: var(--heading-2-letter-spacing);
   min-height: var(--heading-2-line-height);
   line-height: var(--heading-2-line-height);
 }
 
-h3, .h3-default {
+h3,
+.h3-default {
   font-size: var(--heading-3-size);
   letter-spacing: var(--heading-3-letter-spacing);
   min-height: var(--heading-3-line-height);
   line-height: var(--heading-3-line-height);
 }
 
-h4, .h4-default {
+h4,
+.h4-default {
   font-size: var(--heading-4-size);
   letter-spacing: var(--heading-4-letter-spacing);
   min-height: var(--heading-4-line-height);
   line-height: var(--heading-4-line-height);
 }
 
-h5, .h5-default {
+h5,
+.h5-default {
   font-size: var(--heading-5-size);
   letter-spacing: var(--heading-5-letter-spacing);
   min-height: var(--heading-5-line-height);
   line-height: var(--heading-5-line-height);
 }
 
-h6, .h6-default {
+h6,
+.h6-default {
   font-size: var(--heading-6-size);
   letter-spacing: var(--heading-6-letter-spacing);
   min-height: var(--heading-6-line-height);

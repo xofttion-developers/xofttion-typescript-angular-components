@@ -1,8 +1,8 @@
 /**
- * Xofttion Layout Styles
+ * Xofttion Layout Utilities
  * v1.0.0
  * Author: Daniel Andrés Castillo Pedroza
- * Created: 11/Ago/2022
+ * Created: 11/Abr/2023
  * Updated: 13/Abr/2023
 */
 
@@ -31,147 +31,63 @@
   --flex-grid-4-col-3: 0rem;
 }
 
-.grid-gap-8 {
-  display: grid;
-  gap: var(--sizing-8);
-}
+@mixin grid-responsive($size) {
+  .#{$size}-grid-8 {
+    display: grid;
+    gap: var(--sizing-8);
+  }
 
-.grid-gap-12 {
-  display: grid;
-  gap: var(--sizing-12);
-}
+  .#{$size}-grid-12 {
+    display: grid;
+    gap: var(--sizing-12);
+  }
 
-.grid-gap-16 {
-  display: grid;
-  gap: var(--sizing-16);
-}
+  .#{$size}-grid-16 {
+    display: grid;
+    gap: var(--sizing-16);
+  }
 
-.xs-grid-col-12 {
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.xs-grid-col-8 {
-  grid-template-columns: repeat(8, 1fr);
-}
-
-.xs-grid-col-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.xs-grid-col-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.xs-grid-col-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.xs-grid-col-1 {
-  grid-template-columns: repeat(1, 1fr);
-}
-
-@media screen and (min-width: 360px) {
-  .sm-grid-col-12 {
+  .#{$size}-grid-col-12 {
     grid-template-columns: repeat(12, 1fr);
   }
 
-  .sm-grid-col-8 {
+  .#{$size}-grid-col-8 {
     grid-template-columns: repeat(8, 1fr);
   }
 
-  .sm-grid-col-6 {
+  .#{$size}-grid-col-6 {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .sm-grid-col-4 {
+  .#{$size}-grid-col-4 {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .sm-grid-col-2 {
+  .#{$size}-grid-col-2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .sm-grid-col-1 {
+  .#{$size}-grid-col-1 {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@include grid-responsive('xs');
+
+@media screen and (min-width: 360px) {
+  @include grid-responsive('sm');
 }
 
 @media screen and (min-width: 640px) {
-  .md-grid-col-12 {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .md-grid-col-8 {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .md-grid-col-6 {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .md-grid-col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .md-grid-col-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .md-grid-col-1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  @include grid-responsive('md');
 }
 
 @media screen and (min-width: 960px) {
-  .lg-grid-col-12 {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .lg-grid-col-8 {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .lg-grid-col-6 {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .lg-grid-col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .lg-grid-col-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .lg-grid-col-1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  @include grid-responsive('lg');
 }
 
 @media screen and (min-width: 1280px) {
-  .xl-grid-col-12 {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .xl-grid-col-8 {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .xl-grid-col-6 {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .xl-grid-col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .xl-grid-col-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .xl-grid-col-1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  @include grid-responsive('xl');
 }
 
 @mixin flex-grid-responsive($size) {
@@ -294,7 +210,7 @@
   }
 }
 
-.flex-grid-gap-8 {
+.flex-grid-8 {
   display: inline-flex;
   flex-wrap: wrap;
   gap: var(--sizing-8);
@@ -308,7 +224,7 @@
   --flex-grid-6-col-3: 0rem;
 }
 
-.flex-grid-gap-16 {
+.flex-grid-16 {
   display: inline-flex;
   flex-wrap: wrap;
   gap: var(--sizing-16);

@@ -1,17 +1,14 @@
 /**
- * Xofttion Foundations Styles
+ * Xofttion Foundations
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
  * Created: 03/Mar/2022
- * Updated: 11/Abr/2023
+ * Updated: 13/Abr/2023
 */
 
-@use 'foundations/normalize';
-@use 'foundations/layout';
-@use 'foundations/colors';
-@use 'foundations/sizings';
-@use 'foundations/elevations';
-@use 'foundations/themes';
-@use 'foundations/typographics';
-@use 'foundations/xofttion';
+@use 'foundations/colors-foundations';
+@use 'foundations/sizings-foundations';
+@use 'foundations/elevations-foundations';
+@use 'foundations/themes-foundations';
+@use 'foundations/typographics-foundations';
