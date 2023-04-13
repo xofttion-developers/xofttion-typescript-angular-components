@@ -36,13 +36,99 @@
 
   --border-light-500: rgba(242, 242, 242, 1);
 
-  --color-xofttion-900: rgb(20, 97, 187);
+  --theme-xofttion-900: rgba(28, 56, 89, 1);
 
-  --color-xofttion-700: rgb(105, 154, 211);
+  --theme-xofttion-700: rgba(23, 79, 144, 1);
 
-  --color-xofttion-500: rgb(161, 192, 228);
+  --theme-xofttion-500: rgba(20, 97, 187, 1);
 
-  --color-xofttion-300: rgb(199, 217, 239);
+  --theme-xofttion-300: rgba(118, 163, 215, 1);
 
-  --color-xofttion-100: rgb(236, 242, 250);
+  --theme-xofttion-100: rgba(217, 229, 244, 1);
+
+  --gradient-xofttion-500: linear-gradient(
+    180deg,
+    rgb(20, 97, 187) 0%,
+    rgb(23, 79, 144) 100%
+  );
+
+  --theme-success-900: rgba(24, 80, 70, 1);
+
+  --theme-success-700: rgba(14, 126, 106, 1);
+
+  --theme-success-500: rgba(7, 162, 135, 1);
+
+  --theme-success-300: rgba(111, 201, 185, 1);
+
+  --theme-success-100: rgba(215, 240, 235, 1);
+
+  --gradient-success-500: linear-gradient(
+    180deg,
+    rgb(7, 162, 135) 0%,
+    rgb(14, 126, 106) 100%
+  );
+
+  --theme-info-900: rgba(49, 63, 111, 1);
+
+  --theme-info-700: rgba(65, 92, 188, 1);
+
+  --theme-info-500: rgba(78, 115, 248, 1);
+
+  --theme-info-300: rgba(152, 173, 250, 1);
+
+  --theme-info-100: rgba(226, 232, 253, 1);
+
+  --gradient-info-500: linear-gradient(
+    180deg,
+    rgb(78, 115, 248) 0%,
+    rgb(65, 92, 188) 100%
+  );
+
+  --theme-happy-900: rgba(74, 45, 65, 1);
+
+  --theme-happy-700: rgba(115, 57, 96, 1);
+
+  --theme-happy-500: rgba(147, 67, 121, 1);
+
+  --theme-happy-300: rgba(192, 145, 177, 1);
+
+  --theme-happy-100: rgba(237, 224, 233, 1);
+
+  --gradient-happy-500: linear-gradient(
+    180deg,
+    rgb(147, 67, 121) 0%,
+    rgb(115, 57, 96) 100%
+  );
+
+  --theme-warning-900: rgba(112, 81, 48, 1);
+
+  --theme-warning-700: rgba(190, 128, 62, 1);
+
+  --theme-warning-500: rgba(252, 165, 73, 1);
+
+  --theme-warning-300: rgba(253, 202, 149, 1);
+
+  --theme-warning-100: rgba(254, 240, 225, 1);
+
+  --gradient-warning-500: linear-gradient(
+    180deg,
+    rgb(252, 165, 73) 0%,
+    rgb(190, 128, 62) 100%
+  );
+
+  --theme-danger-900: rgba(109, 43, 43, 1);
+
+  --theme-danger-700: rgba(185, 52, 52, 1);
+
+  --theme-danger-500: rgba(244, 60, 60, 1);
+
+  --theme-danger-300: rgba(248, 141, 141, 1);
+
+  --theme-danger-100: rgba(253, 223, 223, 1);
+
+  --gradient-danger-500: linear-gradient(
+    180deg,
+    rgb(244, 60, 60) 0%,
+    rgb(185, 52, 52) 100%
+  );
 }

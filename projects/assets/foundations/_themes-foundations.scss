@@ -7,6 +7,34 @@
  * Updated: 11/Abr/2023
 */
 
+@mixin theme-mode($color) {
+  --theme-mode-900: var(--theme-#{$color}-900);
+
+  --theme-mode-700: var(--theme-#{$color}-700);
+
+  --theme-mode-500: var(--theme-#{$color}-500);
+
+  --theme-mode-300: var(--theme-#{$color}-300);
+
+  --theme-mode-100: var(--theme-#{$color}-100);
+
+  --gradient-mode-500: var(--gradient-#{$color}-500);
+}
+
+@mixin theme-mode-dark($color) {
+  --theme-mode-900: var(--theme-#{$color}-100);
+
+  --theme-mode-700: var(--theme-#{$color}-300);
+
+  --theme-mode-500: var(--theme-#{$color}-500);
+
+  --theme-mode-300: var(--theme-#{$color}-700);
+
+  --theme-mode-100: var(--theme-#{$color}-900);
+
+  --gradient-mode-500: var(--gradient-#{$color}-500);
+}
+
 :root {
   --background-mode-500: var(--background-light-500);
 
@@ -25,6 +53,8 @@
   --border-2-mode-500: var(--border-2) solid var(--border-dark-500);
 
   --border-4-mode-500: var(--border-4) solid var(--border-dark-500);
+
+  @include theme-mode('xofttion');
 }
 
 *[xft-mode='dark'] {
@@ -45,4 +75,46 @@
   --border-2-mode-500: var(--border-2) solid var(--border-light-500);
 
   --border-4-mode-500: var(--border-4) solid var(--border-light-500);
+
+  @include theme-mode-dark('xofttion');
+
+  *[xft-theme='success'] {
+    @include theme-mode-dark('success');
+  }
+
+  *[xft-theme='info'] {
+    @include theme-mode-dark('info');
+  }
+
+  *[xft-theme='happy'] {
+    @include theme-mode-dark('happy');
+  }
+
+  *[xft-theme='warning'] {
+    @include theme-mode-dark('warning');
+  }
+
+  *[xft-theme='danger'] {
+    @include theme-mode-dark('danger');
+  }
+}
+
+*[xft-theme='success'] {
+  @include theme-mode('success');
+}
+
+*[xft-theme='info'] {
+  @include theme-mode('info');
+}
+
+*[xft-theme='happy'] {
+  @include theme-mode('happy');
+}
+
+*[xft-theme='warning'] {
+  @include theme-mode('warning');
+}
+
+*[xft-theme='danger'] {
+  @include theme-mode('danger');
 }

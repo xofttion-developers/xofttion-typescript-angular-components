@@ -9,6 +9,6 @@ import { PaletteMaterial } from './utils/palette';
 })
 export class AppComponent {
   constructor() {
-    console.log(new PaletteMaterial('#605cf3'));
+    console.log(new PaletteMaterial('#4E73F8'));
   }
 }

@@ -1,11 +1,12 @@
-app-root {
-  margin-bottom: var(--sizing-16);
+.app-root {
+  width: 100%;
+  padding: var(--sizing-24) var(--sizing-16);
+  box-sizing: border-box;
 }
 
 .card {
   background: var(--background-mode-500);
-  width: calc(100% - var(--sizing-32));
-  margin: var(--sizing-16);
+  width: 100%;
   box-shadow: var(--shadow-bottom-light-4);
   overflow: hidden;
   border-radius: var(--sizing-8);
@@ -28,6 +29,36 @@ app-root {
     padding: var(--sizing-8);
     box-sizing: border-box;
 
+    &:nth-child(6n + 1) {
+      background: var(--theme-mode-100);
+      color: var(--color-dark-500);
+    }
+
+    &:nth-child(6n + 2) {
+      background: var(--theme-mode-300);
+      color: var(--color-dark-500);
+    }
+
+    &:nth-child(6n + 3) {
+      background: var(--theme-mode-500);
+      color: white;
+    }
+
+    &:nth-child(6n + 4) {
+      background: var(--theme-mode-700);
+      color: white;
+    }
+
+    &:nth-child(6n + 5) {
+      background: var(--theme-mode-900);
+      color: white;
+    }
+
+    &:nth-child(6n + 6) {
+      background: var(--gradient-mode-500);
+      color: white;
+    }
+
     span {
       padding: 0rem var(--sizing-8);
       border-radius: var(--sizing-8);
@@ -46,30 +77,44 @@ app-root {
       box-sizing: border-box;
     }
 
-    &:nth-child(4n + 1) {
+    &:nth-child(6n + 1) {
       .cell {
-        background: #80cbc4;
+        background: var(--theme-xofttion-300);
         color: var(--font-mode-500);
       }
     }
 
-    &:nth-child(4n + 2) {
+    &:nth-child(6n + 2) {
       .cell {
-        background: #ffcc80;
+        background: var(--theme-warning-300);
         color: var(--font-mode-500);
       }
     }
 
-    &:nth-child(4n + 3) {
+    &:nth-child(6n + 3) {
       .cell {
-        background: #f48fb1;
+        background: var(--theme-danger-300);
         color: var(--font-mode-500);
       }
     }
 
-    &:nth-child(4n + 4) {
+    &:nth-child(6n + 4) {
       .cell {
-        background: #90caf9;
+        background: var(--theme-info-300);
+        color: var(--font-mode-500);
+      }
+    }
+
+    &:nth-child(6n + 5) {
+      .cell {
+        background: var(--theme-happy-300);
+        color: var(--font-mode-500);
+      }
+    }
+
+    &:nth-child(6n + 6) {
+      .cell {
+        background: var(--theme-success-300);
         color: var(--font-mode-500);
       }
     }
