@@ -36,13 +36,42 @@ app-root {
 }
 
 .flex {
-  .cell {
-    background: var(--background-mode-100);
-    width: 100%;
-    color: var(--color-mode-500);
-    border-radius: var(--sizing-8);
-    text-align: center;
-    padding: var(--sizing-8);
-    box-sizing: border-box;
+  .content {
+    .cell {
+      width: 100%;
+      color: var(--color-mode-500);
+      border-radius: var(--sizing-8);
+      text-align: center;
+      padding: var(--sizing-8);
+      box-sizing: border-box;
+    }
+
+    &:nth-child(4n + 1) {
+      .cell {
+        background: #80cbc4;
+        color: var(--font-mode-500);
+      }
+    }
+
+    &:nth-child(4n + 2) {
+      .cell {
+        background: #ffcc80;
+        color: var(--font-mode-500);
+      }
+    }
+
+    &:nth-child(4n + 3) {
+      .cell {
+        background: #f48fb1;
+        color: var(--font-mode-500);
+      }
+    }
+
+    &:nth-child(4n + 4) {
+      .cell {
+        background: #90caf9;
+        color: var(--font-mode-500);
+      }
+    }
   }
 }
