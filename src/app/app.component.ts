@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,19 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+  public control: FormControl;
+  public salary: FormControl;
+  public role: FormControl;
+
   public checked = false;
 
-  constructor() {}
+  constructor() {
+    this.control = new FormControl<string>('', [
+      Validators.required,
+      Validators.minLength(5)
+    ]);
+
+    this.salary = new FormControl();
+    this.role = new FormControl();
+  }
 }

@@ -18,7 +18,7 @@
     height: var(--sizing-24);
     box-sizing: border-box;
     border-radius: var(--sizing-12);
-    border: var(--border-2-mode-500);
+    border: var(--border-2-mode-300);
 
     &--checked {
       border: var(--border-2-theme-500);
@@ -41,7 +41,7 @@
     left: var(--sizing-2);
     width: var(--sizing-16);
     height: var(--sizing-16);
-    background: var(--color-mode-100);
+    background: var(--border-mode-300);
     transition: left 160ms 0ms var(--standard-curve);
     border-radius: var(--sizing-12);
   }

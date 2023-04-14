@@ -11,18 +11,19 @@
     <img src="../assets/cr7.jpg" />
   </xft-avatar>
 
-  <xft-checkbox [checked]="checked" xft-theme="success"></xft-checkbox>
-  <xft-radiobutton [checked]="checked" xft-theme="warning"></xft-radiobutton>
-  <xft-switch [checked]="checked" xft-theme="danger"></xft-switch>
   <xft-icon value="attach-inclined" style="color: var(--color-mode-100)">
   </xft-icon>
 
-  <button xft-button="raised" [disabled]="checked">
+  <xft-skeleton-text [active]="true">Daniel Castillo</xft-skeleton-text>
+
+  <button xft-button="raised" [disabled]="checked" xft-theme="info">
     <span>Registrar usuario</span>
   </button>
-  <button xft-button="flat" [disabled]="checked">
+
+  <button xft-button="flat" [disabled]="checked" xft-theme="happy">
     <span>Descargar comprobante</span>
   </button>
+
   <button xft-button="outline" [disabled]="checked">
     <span>Realizar pago</span>
   </button>
@@ -84,12 +85,19 @@
         <div
           class="content xl-flex-col-12 lg-flex-col-8 md-flex-col-6 sm-flex-col-4"
         >
-          <div class="cell">01</div>
+          <xft-text-field
+            [inputControl]="control"
+            placeholder="Nombre completo*"
+          >
+            Nombre completo<span>*</span>
+          </xft-text-field>
         </div>
         <div
           class="content xl-flex-col-6 lg-flex-col-4 md-flex-col-3 sm-flex-col-2"
         >
-          <div class="cell">02</div>
+          <xft-money-field placeholder="Salario*" [inputControl]="salary">
+            Salario (COP)<span>*</span>
+          </xft-money-field>
         </div>
         <div
           class="content xl-flex-col-6 lg-flex-col-4 md-flex-col-3 sm-flex-col-2"
@@ -99,7 +107,9 @@
         <div
           class="content xl-flex-col-4 lg-flex-col-2 md-flex-col-2 sm-flex-col-3"
         >
-          <div class="cell">04</div>
+          <xft-checkbox-label xft-theme="success">
+            Persona mayor de edad
+          </xft-checkbox-label>
         </div>
         <div
           class="content xl-flex-col-4 lg-flex-col-2 md-flex-col-2 sm-flex-col-1"
@@ -109,7 +119,9 @@
         <div
           class="content xl-flex-col-4 lg-flex-col-2 md-flex-col-2 sm-flex-col-1"
         >
-          <div class="cell">06</div>
+          <xft-switch-label xft-theme="danger">
+            Ingeniero de sistemas
+          </xft-switch-label>
         </div>
         <div
           class="content xl-flex-col-3 lg-flex-col-2 md-flex-col-4 sm-flex-col-3"
@@ -119,12 +131,24 @@
         <div
           class="content xl-flex-col-3 lg-flex-col-6 md-flex-col-1 sm-flex-col-2"
         >
-          <div class="cell">08</div>
+          <xft-radiobutton-label
+            [formControl]="role"
+            value="DEV"
+            xft-theme="warning"
+          >
+            Developer FullStack
+          </xft-radiobutton-label>
         </div>
         <div
           class="content xl-flex-col-3 lg-flex-col-2 md-flex-col-1 sm-flex-col-1"
         >
-          <div class="cell">09</div>
+          <xft-radiobutton-label
+            [formControl]="role"
+            value="QA"
+            xft-theme="warning"
+          >
+            Lider de QA
+          </xft-radiobutton-label>
         </div>
         <div
           class="content xl-flex-col-3 lg-flex-col-1 md-flex-col-2 sm-flex-col-1"

@@ -1,0 +1,84 @@
+/*!
+ * Xofttion BoxField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 08/Sep/2022
+ * Updated: 14/Abr/2023
+*/
+
+.xft-box-field {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__content {
+    --box-field-label-color: var(--color-mode-300);
+    --box-field-body-background: var(--background-mode-300);
+    --box-field-body-border: var(--border-2-mode-100);
+
+    transition: height 160ms 0ms var(--standard-curve);
+    box-sizing: border-box;
+
+    &--active {
+      --box-field-label-color: var(--theme-mode-500);
+      --box-field-body-background: var(--background-mode-500);
+      --box-field-body-border: var(--border-2-theme-500);
+    }
+
+    &--error {
+      --box-field-label-color: var(--theme-danger-500);
+      --box-field-body-border: var(--border-2) solid var(--theme-danger-500);
+    }
+
+    &--disabled {
+      --box-field-body-background: var(--background-mode-500);
+
+      .xft-box-field__label {
+        opacity: 0.5;
+      }
+
+      .xft-box-field__body {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-bottom: var(--sizing-4);
+    color: var(--box-field-label-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    span {
+      color: var(--theme-danger-500);
+    }
+  }
+
+  &__body {
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: var(--sizing-4);
+    background: var(--box-field-body-background);
+    border: var(--box-field-body-border);
+  }
+
+  &__helper {
+    color: var(--color-mode-100);
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-top: var(--sizing-4);
+
+    &--error {
+      color: var(--theme-danger-500);
+    }
+  }
+}

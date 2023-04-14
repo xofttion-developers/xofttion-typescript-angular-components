@@ -8,10 +8,10 @@
 */
 
 .xft-button {
-  --button-hover-background: var(--theme-xofttion-100);
-  --button-hover-color: var(--theme-xofttion-100);
+  --button-hover-background: var(--theme-mode-100);
+  --button-hover-color: var(--theme-mode-100);
   --button-hover-border: none;
-  --button-ripple: var(--theme-xofttion-500);
+  --button-ripple: var(--theme-mode-700);
 
   position: relative;
   float: left;
@@ -73,21 +73,21 @@
     }
 
     &--flat {
-      background: var(--theme-xofttion-100);
-      color: var(--theme-xofttion-500);
+      background: var(--theme-mode-100);
+      color: var(--theme-mode-500);
 
-      --button-hover-background: var(--theme-xofttion-300);
-      --button-hover-color: var(--theme-xofttion-900);
+      --button-hover-background: var(--theme-mode-300);
+      --button-hover-color: var(--color-light-500);
       --button-hover-border: none;
     }
 
     &--outline {
       border: var(--border-2-theme-500);
       background: transparent;
-      color: var(--theme-xofttion-500);
+      color: var(--theme-mode-500);
 
-      --button-hover-background: var(--theme-xofttion-300);
-      --button-hover-color: var(--theme-xofttion-900);
+      --button-hover-background: var(--theme-mode-300);
+      --button-hover-color: var(--color-light-500);
       --button-hover-border: var(--border-2-theme-900);
     }
 
@@ -95,7 +95,7 @@
       background: var(--gradient-mode-500);
       color: var(--color-light-500);
       
-      --button-hover-background: var(--theme-xofttion-900);
+      --button-hover-background: var(--theme-mode-900);
       --button-hover-color: var(--color-light-500);
       --button-hover-border: none;
       --button-ripple: var(--color-light-500);

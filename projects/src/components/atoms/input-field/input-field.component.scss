@@ -1,0 +1,85 @@
+/*!
+ * Xofttion InputField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 14/Abr/2022
+*/
+
+.xft-input-field {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__content {
+    &--active {
+      .xft-input-field__component {
+        color: var(--color-mode-500);
+      }
+
+      .xft-input-field__value {
+        color: transparent;
+      }
+    }
+
+    &--disabled {
+      .xft-input-field__value {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__component {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: var(--sizing-24);
+    line-height: var(--sizing-24);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: transparent;
+    font-size: var(--body-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-mode-100);
+    }
+
+    &::selection {
+      background: var(--theme-mode-700);
+      color: var(--color-light-500);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    margin: 0rem;
+    -webkit-appearance: none;
+  }
+
+  &__value {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: var(--sizing-24);
+    line-height: var(--sizing-24);
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--color-mode-500);
+    font-size: var(--body-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-letter-spacing);
+  }
+}

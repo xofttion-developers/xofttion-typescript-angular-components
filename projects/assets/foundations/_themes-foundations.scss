@@ -31,9 +31,9 @@
 
   --skeleton-mode-500: var(--skeleton-#{$color}-500);
 
-  --skeleton-mode-500: var(--skeleton-#{$color}-500);
+  --skeleton-mode-300: var(--skeleton-#{$color}-300);
 
-  --skeleton-mode-500: var(--skeleton-#{$color}-500);
+  --skeleton-mode-100: var(--skeleton-#{$color}-100);
 
   @include border-theme-mode(900, $color);
   @include border-theme-mode(700, $color);
@@ -44,12 +44,12 @@
   --gradient-mode-500: var(--gradient-#{$color}-500);
 }
 
-@mixin border-mode($theme) {
-  --border-1-mode-500: var(--border-1) solid var(--border-#{$theme}-500);
+@mixin border-mode($theme, $token) {
+  --border-1-mode-#{$token}: var(--border-1) solid var(--border-#{$theme}-#{$token});
 
-  --border-2-mode-500: var(--border-2) solid var(--border-#{$theme}-500);
+  --border-2-mode-#{$token}: var(--border-2) solid var(--border-#{$theme}-#{$token});
 
-  --border-4-mode-500: var(--border-4) solid var(--border-#{$theme}-500);
+  --border-4-mode-#{$token}: var(--border-4) solid var(--border-#{$theme}-#{$token});
 }
 
 :root {
@@ -65,7 +65,15 @@
 
   --color-mode-100: var(--color-dark-100);
 
-  @include border-mode('dark');
+  --border-mode-500: var(--border-dark-500);
+
+  --border-mode-300: var(--border-dark-300);
+
+  --border-mode-100: var(--border-dark-100);
+
+  @include border-mode('dark', 500);
+  @include border-mode('dark', 300);
+  @include border-mode('dark', 100);
   @include theme-mode('xofttion');
 }
 
@@ -82,7 +90,15 @@
 
   --color-mode-100: var(--color-light-100);
 
-  @include border-mode('light');
+  --border-mode-500: var(--border-light-500);
+
+  --border-mode-300: var(--border-light-300);
+
+  --border-mode-100: var(--border-light-100);
+
+  @include border-mode('light', 500);
+  @include border-mode('light', 300);
+  @include border-mode('light', 100);
 }
 
 *[xft-theme='success'] {
