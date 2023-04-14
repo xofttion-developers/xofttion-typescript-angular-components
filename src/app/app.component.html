@@ -1,4 +1,32 @@
 <div class="app-root">
+  <xft-avatar
+    [skeleton]="false"
+    [rounded]="false"
+    style="font-size: var(--label-size)"
+  >
+    <span>10%</span>
+  </xft-avatar>
+
+  <xft-avatar [skeleton]="false" [rounded]="true" (click)="checked = !checked">
+    <img src="../assets/cr7.jpg" />
+  </xft-avatar>
+
+  <xft-checkbox [checked]="checked" xft-theme="success"></xft-checkbox>
+  <xft-radiobutton [checked]="checked" xft-theme="warning"></xft-radiobutton>
+  <xft-switch [checked]="checked" xft-theme="danger"></xft-switch>
+  <xft-icon value="attach-inclined" style="color: var(--color-mode-100)">
+  </xft-icon>
+
+  <button xft-button="raised" [disabled]="checked">
+    <span>Registrar usuario</span>
+  </button>
+  <button xft-button="flat" [disabled]="checked">
+    <span>Descargar comprobante</span>
+  </button>
+  <button xft-button="outline" [disabled]="checked">
+    <span>Realizar pago</span>
+  </button>
+
   <div class="card">
     <div class="container">
       <h4 class="font-mode-500">Daniel Andres Castillo Pedroza</h4>

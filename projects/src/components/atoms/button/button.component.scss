@@ -1,0 +1,134 @@
+/*!
+ * Xofttion Button Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 14/Abr/2023
+*/
+
+.xft-button {
+  --button-hover-background: var(--theme-xofttion-100);
+  --button-hover-color: var(--theme-xofttion-100);
+  --button-hover-border: none;
+  --button-ripple: var(--theme-xofttion-500);
+
+  position: relative;
+  float: left;
+  padding: 0rem;
+  background: transparent;
+  overflow: hidden;
+  outline: none;
+
+  &:not(:disabled):not(:active) {
+    .xft-button__content::before {
+      animation: ripple-squarecenter 1000ms var(--standard-curve);
+    }
+  }
+
+  &:not(:disabled):focus {
+    .xft-button__content::before {
+      visibility: visible;
+    }
+  }
+
+  &:not(:disabled) {
+    &:hover > .xft-button__content {
+      background: var(--button-hover-background);
+      color: var(--button-hover-color);
+      border: var(--button-hover-border);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &__content {
+    line-height: var(--sizing-40);
+    height: var(--sizing-40);
+    padding: 0rem var(--sizing-8);
+    box-sizing: border-box;
+    border-radius: var(--sizing-4);
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      padding-top: calc(100% - var(--sizing-16));
+      padding-left: calc(100% - var(--sizing-16));
+      margin-top: calc(-50% + var(--sizing-8));
+      margin-left: calc(-50% + var(--sizing-8));
+      border-radius: 50%;
+      opacity: 0.26;
+      visibility: hidden;
+      transform: scale(0);
+      z-index: var(--z-index-2);
+      background: var(--button-ripple);
+    }
+
+    &--flat {
+      background: var(--theme-xofttion-100);
+      color: var(--theme-xofttion-500);
+
+      --button-hover-background: var(--theme-xofttion-300);
+      --button-hover-color: var(--theme-xofttion-900);
+      --button-hover-border: none;
+    }
+
+    &--outline {
+      border: var(--border-2-theme-500);
+      background: transparent;
+      color: var(--theme-xofttion-500);
+
+      --button-hover-background: var(--theme-xofttion-300);
+      --button-hover-color: var(--theme-xofttion-900);
+      --button-hover-border: var(--border-2-theme-900);
+    }
+
+    &--raised {
+      background: var(--gradient-mode-500);
+      color: var(--color-light-500);
+      
+      --button-hover-background: var(--theme-xofttion-900);
+      --button-hover-color: var(--color-light-500);
+      --button-hover-border: none;
+      --button-ripple: var(--color-light-500);
+    }
+  }
+
+  &__icon {
+    margin: auto var(--sizing-4);
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    line-height: initial;
+    padding: 0rem var(--sizing-4);
+    margin: auto 0rem;
+    font-size: 0.925rem;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.875px;
+  }
+}
+
+@keyframes ripple-squarecenter {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

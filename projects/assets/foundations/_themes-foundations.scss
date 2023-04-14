@@ -7,6 +7,17 @@
  * Updated: 14/Abr/2023
 */
 
+@mixin border-theme-mode($token, $color) {
+  --border-1-theme-#{$token}: var(--border-1) solid
+    var(--theme-#{$color}-#{$token});
+
+  --border-2-theme-#{$token}: var(--border-2) solid
+    var(--theme-#{$color}-#{$token});
+
+  --border-4-theme-#{$token}: var(--border-4) solid
+    var(--theme-#{$color}-#{$token});
+}
+
 @mixin theme-mode($color) {
   --theme-mode-900: var(--theme-#{$color}-900);
 
@@ -24,7 +35,21 @@
 
   --skeleton-mode-500: var(--skeleton-#{$color}-500);
 
+  @include border-theme-mode(900, $color);
+  @include border-theme-mode(700, $color);
+  @include border-theme-mode(500, $color);
+  @include border-theme-mode(300, $color);
+  @include border-theme-mode(100, $color);
+
   --gradient-mode-500: var(--gradient-#{$color}-500);
+}
+
+@mixin border-mode($theme) {
+  --border-1-mode-500: var(--border-1) solid var(--border-#{$theme}-500);
+
+  --border-2-mode-500: var(--border-2) solid var(--border-#{$theme}-500);
+
+  --border-4-mode-500: var(--border-4) solid var(--border-#{$theme}-500);
 }
 
 :root {
@@ -40,12 +65,7 @@
 
   --color-mode-100: var(--color-dark-100);
 
-  --border-1-mode-500: var(--border-1) solid var(--border-dark-500);
-
-  --border-2-mode-500: var(--border-2) solid var(--border-dark-500);
-
-  --border-4-mode-500: var(--border-4) solid var(--border-dark-500);
-
+  @include border-mode('dark');
   @include theme-mode('xofttion');
 }
 
@@ -62,11 +82,7 @@
 
   --color-mode-100: var(--color-light-100);
 
-  --border-1-mode-500: var(--border-1) solid var(--border-light-500);
-
-  --border-2-mode-500: var(--border-2) solid var(--border-light-500);
-
-  --border-4-mode-500: var(--border-4) solid var(--border-light-500);
+  @include border-mode('light');
 }
 
 *[xft-theme='success'] {

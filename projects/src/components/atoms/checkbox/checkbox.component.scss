@@ -1,0 +1,53 @@
+/*!
+ * Xofttion Checkbox Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Ago/2022
+*/
+
+.xft-checkbox {
+  position: relative;
+  float: left;
+  width: var(--sizing-24);
+  height: var(--sizing-24);
+  box-sizing: border-box;
+  outline: none;
+
+  &__content {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: var(--sizing-4);
+    border: var(--border-2-mode-500);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--checked {
+      border: var(--border-2-theme-500);
+
+      .xft-checkbox__component {
+        transform: scale(1);
+      }
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__component {
+    border-radius: var(--sizing-2);
+    width: 0.875rem;
+    height: 0.875rem;
+    margin: auto;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    background: var(--gradient-mode-500);
+    transition: all 160ms 0ms var(--standard-curve);
+  }
+}

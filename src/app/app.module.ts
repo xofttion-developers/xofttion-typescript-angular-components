@@ -4,11 +4,12 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { AtomsComponentsModule } from 'projects/src/components/atoms/atoms.module';
 
 registerLocaleData(localeCo);
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule],
+  imports: [BrowserModule, ReactiveFormsModule, AtomsComponentsModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [{ provide: LOCALE_ID, useValue: 'es-CO' }]

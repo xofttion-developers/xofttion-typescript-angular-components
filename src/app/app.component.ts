@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { PaletteMaterial } from './utils/palette';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { PaletteMaterial } from './utils/palette';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  constructor() {
-    console.log(new PaletteMaterial('#4E73F8'));
-  }
+  public checked = false;
+
+  constructor() {}
 }
