@@ -41,22 +41,22 @@
 
     &:nth-child(6n + 3) {
       background: var(--theme-mode-500);
-      color: white;
+      color: var(--color-light-500);
     }
 
     &:nth-child(6n + 4) {
       background: var(--theme-mode-700);
-      color: white;
+      color: var(--color-light-500);
     }
 
     &:nth-child(6n + 5) {
       background: var(--theme-mode-900);
-      color: white;
+      color: var(--color-light-500);
     }
 
     &:nth-child(6n + 6) {
       background: var(--gradient-mode-500);
-      color: white;
+      color: var(--color-light-500);
     }
 
     span {
