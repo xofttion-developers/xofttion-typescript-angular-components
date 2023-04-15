@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AtomsComponentsModule } from 'projects/src/components/atoms/atoms.module';
 import { MoleculesComponentsModule } from 'projects/src/components/molecules/molecules.module';
+import { OrganismsComponentsModule } from 'projects/src/components/organisms/organisms.module';
 
 registerLocaleData(localeCo);
 
@@ -14,7 +15,8 @@ registerLocaleData(localeCo);
     BrowserModule,
     ReactiveFormsModule,
     AtomsComponentsModule,
-    MoleculesComponentsModule
+    MoleculesComponentsModule,
+    OrganismsComponentsModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

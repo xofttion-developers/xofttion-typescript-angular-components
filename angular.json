@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "defaultProject": "xofttion-angular-ui-components",
   "newProjectRoot": "projects",
   "cli": {
     "analytics": false
@@ -16,6 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["lodash"],
             "outputPath": "dist/xofttion-angular-ui-components",
             "index": "src/index.html",
             "main": "src/main.ts",

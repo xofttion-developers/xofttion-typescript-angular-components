@@ -1,7 +1,7 @@
 import { ElementRef, Renderer2 } from '@angular/core';
 import { Optional } from '@xofttion/utils';
 
-class DOMComponent {
+export class DOMComponent {
   constructor(private ref: ElementRef, private render: Renderer2) {}
 
   public get element(): HTMLElement {

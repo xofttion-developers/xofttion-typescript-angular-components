@@ -1,0 +1,55 @@
+/*!
+ * Xofttion DateField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Abr/2022
+*/
+
+.xft-date-field {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  .xft-box-field {
+    &__body {
+      padding: var(--sizing-6) var(--sizing-8);
+    }
+  }
+
+  &__control {
+    position: relative;
+    float: left;
+    width: calc(100% - var(--sizing-28));
+    height: var(--sizing-24);
+    line-height: var(--sizing-24);
+    padding: 0rem;
+    cursor: default;
+    border: none;
+    outline: none;
+    color: var(--font-primary-900);
+    background: transparent;
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-1-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-secondary-300);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__action {
+    color: var(--font-primary-700);
+    width: var(--sizing-24);
+    height: var(--sizing-24);
+    padding: 0rem;
+    margin-left: var(--sizing-4);
+    background: transparent;
+  }
+}
