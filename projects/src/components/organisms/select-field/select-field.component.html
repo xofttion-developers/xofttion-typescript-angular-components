@@ -1,0 +1,69 @@
+<div
+  class="xft-box-field__content"
+  [class.xft-box-field__content--active]="status.active"
+  [class.xft-box-field__content--disabled]="status.disabled"
+>
+  <label class="xft-box-field__label" [for]="elementId" *ngIf="label">
+    <ng-content></ng-content>
+  </label>
+
+  <div class="xft-box-field__component">
+    <div class="xft-box-field__body">
+      <input
+        class="xft-list-field__control"
+        type="text"
+        [placeholder]="placeholder"
+        [value]="suggestion"
+        [disabled]="status.disabled"
+        readonly="true"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        (click)="onClickInput()"
+        (keydown)="onKeydownInput($event)"
+      />
+
+      <button
+        class="xft-list-field__action"
+        [class.xft-list-field__action--show]="status.show"
+        [disabled]="status.disabled"
+        (click)="onClickAction()"
+      >
+        <xft-icon value="arrow-ios-down"></xft-icon>
+      </button>
+    </div>
+
+    <div
+      class="xft-list-field__suggestions"
+      [class.xft-list-field__suggestions--show]="status.show"
+      [class.xft-list-field__suggestions--hide]="status.hide"
+      [class.xft-list-field__suggestions--higher]="isHigher"
+      [class.xft-list-field__suggestions--sheet]="sheetMode"
+    >
+      <ul class="xft-list-field__ul">
+        <xft-ballot
+          *ngFor="let element of suggestions"
+          class="xft-list-field__element"
+          tabindex="-1"
+          [initials]="element?.initials"
+          [photo]="element?.photo"
+          [subtitle]="element?.subtitle"
+          (click)="onSelect(element)"
+          (keydown)="onKeydownElement($event, element)"
+        >
+          {{ element?.title }}
+        </xft-ballot>
+
+        <div *ngIf="!suggestions.length" class="xft-list-field__empty">
+          <div class="xft-list-field__empty__description">
+            <label class="label-bold truncate"> Selección no disponible </label>
+            <label class="caption-regular">
+              Lo sentimos, en el momento no hay elementos en el listado
+            </label>
+          </div>
+        </div>
+      </ul>
+
+      <div class="xft-list-field__backdrop" (click)="onClickBackdrop()"></div>
+    </div>
+  </div>
+</div>

@@ -29,14 +29,14 @@
     cursor: default;
     border: none;
     outline: none;
-    color: var(--font-primary-900);
+    color: var(--color-mode-500);
     background: transparent;
-    font-size: var(--body-1-size);
+    font-size: var(--body-size);
     font-weight: var(--font-weight-medium);
-    letter-spacing: var(--body-1-letter-spacing);
+    letter-spacing: var(--body-letter-spacing);
 
     &::placeholder {
-      color: var(--color-secondary-300);
+      color: var(--color-mode-100);
     }
 
     &:disabled {
@@ -45,7 +45,7 @@
   }
 
   &__action {
-    color: var(--font-primary-700);
+    color: var(--color-mode-300);
     width: var(--sizing-24);
     height: var(--sizing-24);
     padding: 0rem;

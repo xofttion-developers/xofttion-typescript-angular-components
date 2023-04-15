@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { personsElement } from './resources/persons';
+import { PaletteMaterial } from './utils/palette';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,8 @@ export class AppComponent {
   public salary: FormControl;
   public role: FormControl;
 
+  public persons = personsElement;
+
   public checked = false;
 
   constructor() {
@@ -22,5 +26,7 @@ export class AppComponent {
 
     this.salary = new FormControl();
     this.role = new FormControl();
+
+    console.log(new PaletteMaterial('#18B6F6'));
   }
 }

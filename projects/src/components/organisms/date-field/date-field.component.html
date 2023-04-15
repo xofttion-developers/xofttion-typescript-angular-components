@@ -4,11 +4,7 @@
   [class.xft-box-field--disabled]="status.disabled"
   [class.xft-date-field--selected]="!!value"
 >
-  <label
-    class="xft-box-field__label smalltext-semibold"
-    [for]="elementId"
-    *ngIf="label"
-  >
+  <label class="xft-box-field__label" [for]="elementId" *ngIf="label">
     <ng-content></ng-content>
   </label>
 

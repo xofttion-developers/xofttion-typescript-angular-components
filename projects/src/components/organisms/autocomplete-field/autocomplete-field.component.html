@@ -1,0 +1,91 @@
+<div
+  class="xft-box-field__content"
+  [class.xft-box-field__content--active]="status.active"
+  [class.xft-box-field__content--disabled]="status.disabled"
+  [class.xft-list-field__content--selected]="isSelected"
+>
+  <label class="xft-box-field__label" [for]="elementId" *ngIf="label">
+    <ng-content></ng-content>
+  </label>
+
+  <div class="xft-box-field__component">
+    <div class="xft-box-field__body">
+      <label class="xft-list-field__control" (click)="onOpen()">
+        <span class="xft-list-field__control__description" *ngIf="description">
+          {{ description }}
+        </span>
+
+        <span class="xft-list-field__control__placeholder" *ngIf="!description">
+          {{ placeholder }}
+        </span>
+      </label>
+
+      <button
+        class="xft-list-field__action"
+        [hidden]="!isSelected"
+        (click)="onClear()"
+      >
+        <xft-icon value="trash-2"></xft-icon>
+      </button>
+    </div>
+
+    <div
+      class="xft-list-field__suggestions"
+      [class.xft-list-field__suggestions--show]="status.show"
+      [class.xft-list-field__suggestions--hide]="status.hide"
+      [class.xft-list-field__suggestions--higher]="isHigher"
+      [class.xft-list-field__suggestions--sheet]="sheetMode"
+    >
+      <ul class="xft-list-field__ul">
+        <div class="xft-list-field__ul__search">
+          <button
+            xft-button-action="search"
+            *ngIf="requestAllow"
+            (click)="onRequest()"
+            [disabled]="requesting"
+          ></button>
+
+          <input
+            class="xft-list-field__ul__control"
+            type="text"
+            [placeholder]="placeholder"
+            [disabled]="requesting"
+            [value]="suggestion"
+            (focus)="onFocus()"
+            (blur)="onBlur()"
+            (input)="onInput($event)"
+            (keydown)="onKeydownInput($event)"
+          />
+
+          <xft-progress-bar [indeterminate]="true" [hidden]="!requesting">
+          </xft-progress-bar>
+        </div>
+
+        <xft-ballot
+          *ngFor="let element of coincidences"
+          class="xft-list-field__element"
+          tabindex="-1"
+          [initials]="element?.initials"
+          [photo]="element?.photo"
+          [subtitle]="element?.subtitle"
+          (click)="onSelect(element)"
+          (keydown)="onKeydownElement($event, element)"
+        >
+          {{ element?.title }}
+        </xft-ballot>
+
+        <div *ngIf="!coincidences.length" class="xft-list-field__empty">
+          <div class="xft-list-field__empty__description">
+            <label class="body2-bold truncate"> Selección no disponible </label>
+            <label class="caption-regular">
+              Lo sentimos, no se encontraron resultados con el filtro
+              establecido
+            </label>
+          </div>
+        </div>
+      </ul>
+
+      <div class="xft-list-field__backdrop" (click)="onClickBackdrop()"></div>
+    </div>
+  </div>
+</div>

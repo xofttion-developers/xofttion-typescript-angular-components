@@ -128,7 +128,9 @@
         <div
           class="content xl-flex-col-3 lg-flex-col-2 md-flex-col-4 sm-flex-col-3"
         >
-          <div class="cell">07</div>
+          <xft-select-field [suggestions]="persons" [sheetMode]="false">
+            Encargado del proceso<span>*</span>
+          </xft-select-field>
         </div>
         <div
           class="content xl-flex-col-3 lg-flex-col-6 md-flex-col-1 sm-flex-col-2"
@@ -155,7 +157,9 @@
         <div
           class="content xl-flex-col-3 lg-flex-col-1 md-flex-col-2 sm-flex-col-1"
         >
-          <div class="cell">10</div>
+          <xft-autocomplete-field [suggestions]="persons" [sheetMode]="false">
+            Lider de ingenieria<span>*</span>
+          </xft-autocomplete-field>
         </div>
         <div
           class="content xl-flex-col-2 lg-flex-col-1 md-flex-col-4 sm-flex-col-1"

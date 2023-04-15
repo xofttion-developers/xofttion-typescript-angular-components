@@ -56,6 +56,11 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--smalltext-size);
+    letter-spacing: var(--smalltext-letter-spacing);
+    min-height: var(--smalltext-line-height);
+    line-height: var(--smalltext-line-height);
 
     span {
       color: var(--theme-danger-500);
@@ -76,6 +81,11 @@
     padding: 0rem 0.625rem;
     box-sizing: border-box;
     margin-top: var(--sizing-4);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--overline-size);
+    letter-spacing: var(--overline-letter-spacing);
+    min-height: var(--overline-line-height);
+    line-height: var(--overline-line-height);
 
     &--error {
       color: var(--theme-danger-500);

@@ -1,0 +1,111 @@
+/*!
+ * Xofttion ButtonAction Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Abr/2023
+*/
+
+.xft-button-action {
+  position: relative;
+  width: var(--sizing-32);
+  height: var(--sizing-32);
+  border: none;
+  outline: none;
+  padding: var(--sizing-4);
+  box-sizing: border-box;
+  user-select: none;
+  background: transparent;
+  cursor: default;
+  color: var(--color-mode-300);
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    opacity: 0.32;
+    visibility: hidden;
+    border-radius: 50%;
+    background: var(--background-mode-300);
+    padding-top: calc(120% - var(--sizing-8));
+    padding-left: calc(120% - var(--sizing-8));
+    margin-top: calc(-60% + var(--sizing-4));
+    margin-left: calc(-60% + var(--sizing-4));
+    transform: scale(0);
+  }
+
+  &:not(:active)::before {
+    animation: ripple-button-action 1000ms var(--standard-curve);
+  }
+
+  &:focus::before {
+    visibility: visible;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: var(--sizing-40);
+    height: var(--sizing-40);
+    opacity: 0.24;
+    margin-top: calc(var(--sizing-20) * -1);
+    margin-left: calc(var(--sizing-20) * -1);
+    border-radius: 50%;
+    background: var(--background-mode-300);
+    transform: scale(0);
+    transition: transform 160ms 0ms var(--sharp-curve);
+  }
+
+  &:not(:disabled):hover {
+    &::after {
+      transform: scale(1);
+    }
+
+    .xft-button-action__tooltip {
+      opacity: 1;
+      transition-delay: 480ms;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: calc(100% + var(--sizing-8));
+    left: 50%;
+    width: auto;
+    float: initial;
+    opacity: 0;
+    padding: var(--sizing-8);
+    border-radius: var(--sizing-4);
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateX(-50%);
+    background: var(--color-dark-500);
+    color: var(--color-light-500);
+    transition: opacity 200ms 0ms var(--deceleration-curve);
+  }
+}
+
+@keyframes ripple-button-action {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

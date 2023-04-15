@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BallotComponentModule } from './ballot/ballot.component.module';
 import { CheckboxLabelComponentModule } from './checkbox-label/checkbox-label.component.module';
 import { DayPickerComponentModule } from './day-picker/day-picker.component.module';
 import { MoneyFieldComponentModule } from './money-field/money-field.component.module';
@@ -9,6 +10,7 @@ import { TextFieldComponentModule } from './text-field/text-field.component.modu
 import { YearPickerComponentModule } from './year-picker/year-picker.component.module';
 
 const components = [
+  BallotComponentModule,
   CheckboxLabelComponentModule,
   DayPickerComponentModule,
   MoneyFieldComponentModule,

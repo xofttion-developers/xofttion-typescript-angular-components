@@ -1,0 +1,69 @@
+/*!
+ * Xofttion Ballot Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Abr/2023
+*/
+
+.xft-ballot {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    padding: var(--sizing-8);
+    box-sizing: border-box;
+
+    &--bordered {
+      border-radius: var(--sizing-8);
+      border: var(--border-1-mode-300);
+    }
+
+    &--skeleton {
+      .xft-ballot__subtitle {
+        width: 60%;
+        max-height: var(--label-line-height);
+        margin-top: var(--sizing-4);
+      }
+    }
+  }
+
+  &__avatar {
+    line-height: var(--sizing-40);
+    width: var(--sizing-40);
+    height: var(--sizing-40);
+    margin: auto 0rem;
+
+    & + .xft-ballot__component {
+      width: calc(100% - var(--sizing-56));
+      margin-left: var(--sizing-8);
+    }
+  }
+
+  &__component {
+    overflow: hidden;
+    margin: auto;
+  }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: var(--color-mode-500);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: var(--color-mode-300);
+    margin-top: var(--sizing-4);
+  }
+}

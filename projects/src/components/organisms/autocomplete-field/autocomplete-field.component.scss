@@ -1,0 +1,82 @@
+/*!
+ * Xofttion AutocompleteField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 18/Sep/2022
+*/
+
+xft-autocomplete-field {
+  .xft-list-field {
+    &__content {
+      &--selected {
+        .xft-list-field__control {
+          width: calc(100% - var(--sizing-28));
+        }
+      }
+    }
+
+    &__control {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__ul {
+      &__search {
+        width: calc(100% - var(--sizing-24));
+        margin: var(--sizing-4) var(--sizing-12) var(--sizing-12);
+        border-radius: var(--sizing-4);
+        overflow: hidden;
+        background: var(--color-primary-500);
+
+        .xft-button-action {
+          position: absolute;
+          right: var(--sizing-8);
+          top: var(--sizing-4);
+          z-index: var(--z-index-2);
+
+          &::after {
+            width: var(--sizing-32);
+            height: var(--sizing-32);
+            margin-top: calc(var(--sizing-16) * -1);
+            margin-left: calc(var(--sizing-16) * -1);
+          }
+        }
+      }
+
+      &__control {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: var(--sizing-40);
+        line-height: var(--sizing-40);
+        padding: 0rem var(--sizing-8);
+        box-sizing: border-box;
+        cursor: text;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var(--font-primary-900);
+        font-size: var(--body-1-size);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: var(--body-1-letter-spacing);
+
+        &::placeholder {
+          color: var(--font-primary-500);
+        }
+
+        &::selection {
+          background: var(--color-theme-900);
+          color: var(--font-light-900);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -4,11 +4,7 @@
   [class.xft-box-field__content--error]="status.error"
   [class.xft-box-field__content--disabled]="status.disabled"
 >
-  <label
-    class="xft-box-field__label smalltext-medium"
-    [for]="elementId"
-    *ngIf="label"
-  >
+  <label class="xft-box-field__label" [for]="elementId" *ngIf="label">
     <ng-content></ng-content>
   </label>
 
@@ -28,7 +24,7 @@
   </div>
 
   <div
-    class="xft-box-field__helper xft-box-field__helper--error overline-medium"
+    class="xft-box-field__helper xft-box-field__helper--error"
     *ngIf="status.error"
   >
     <span>{{ status.msgError }}</span>
