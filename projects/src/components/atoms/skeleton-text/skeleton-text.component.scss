@@ -29,7 +29,7 @@
     letter-spacing: inherit;
 
     &--active {
-      background: var(--theme-mode-100);
+      background: var(--color-xofttion-100);
       border-radius: var(--sizing-4);
 
       &::after {
@@ -51,9 +51,9 @@
       transform: translateX(-100%);
       background-image: linear-gradient(
         90deg,
-        var(--skeleton-mode-100) 0%,
-        var(--skeleton-mode-300) 20%,
-        var(--skeleton-mode-500) 60%,
+        var(--skeleton-xofttion-100) 0%,
+        var(--skeleton-xofttion-300) 20%,
+        var(--skeleton-xofttion-500) 60%,
         var(--skeleton-mode-100)
       );
     }

@@ -1,4 +1,4 @@
-import { getInitials } from '@xofttion/utils';
+import { getInitials, hasPattern } from '@xofttion/utils';
 import { ListFieldElement } from 'projects/src/components/organisms';
 
 class Person {
@@ -35,8 +35,8 @@ class PersonElement implements ListFieldElement {
     return true;
   }
 
-  hasCoincidence(_: string): boolean {
-    return true;
+  hasCoincidence(pattern: string): boolean {
+    return hasPattern(this.person.nombre, pattern);
   }
 }
 

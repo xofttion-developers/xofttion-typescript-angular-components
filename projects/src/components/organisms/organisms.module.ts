@@ -3,6 +3,7 @@ import { AutocompleteFieldComponentModule } from './autocomplete-field/autocompl
 import { DateFieldComponentModule } from './date-field/date-field.component.module';
 import { DatePickerComponentModule } from './date-picker/date-picker.component.module';
 import { ModalComponentModule } from './modal/modal.component.module';
+import { PopupComponentModule } from './popup/popup.component.module';
 import { SelectFieldComponentModule } from './select-field/select-field.component.module';
 
 const components = [
@@ -10,6 +11,7 @@ const components = [
   DateFieldComponentModule,
   DatePickerComponentModule,
   ModalComponentModule,
+  PopupComponentModule,
   SelectFieldComponentModule
 ];
 

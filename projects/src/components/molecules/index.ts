@@ -14,5 +14,7 @@ export * from './switch-label/switch-label.component';
 export * from './switch-label/switch-label.component.module';
 export * from './text-field/text-field.component';
 export * from './text-field/text-field.component.module';
+export * from './toolbar/toolbar.component';
+export * from './toolbar/toolbar.component.module';
 export * from './year-picker/year-picker.component';
 export * from './year-picker/year-picker.component.module';

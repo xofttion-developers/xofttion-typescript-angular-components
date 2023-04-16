@@ -8,5 +8,8 @@ export * from './list-field/list-field-element';
 export * from './modal/modal.component';
 export * from './modal/modal.component.module';
 export * from './modal/modal.component.service';
+export * from './popup/popup.component';
+export * from './popup/popup.component.module';
+export * from './popup/popup.component.service';
 export * from './select-field/select-field.component';
 export * from './select-field/select-field.component.module';

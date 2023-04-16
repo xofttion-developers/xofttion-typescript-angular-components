@@ -29,18 +29,18 @@
     cursor: text;
     border: none;
     outline: none;
-    color: var(--color-mode-500);
+    color: var(--color-theme-500);
     background: transparent;
     font-size: var(--body-1-size);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-1-letter-spacing);
 
     &::placeholder {
-      color: var(--color-mode-300);
+      color: var(--color-theme-300);
     }
 
     &::selection {
-      background: var(--theme-mode-700);
+      background: var(--color-xofttion-700);
       color: var(--color-light-500);
     }
 
@@ -51,12 +51,12 @@
     &__placeholder {
       position: relative;
       float: left;
-      color: var(--color-mode-300);
+      color: var(--color-theme-300);
     }
   }
 
   &__action {
-    color: var(--color-mode-300);
+    color: var(--color-theme-300);
     width: var(--sizing-24);
     height: var(--sizing-24);
     padding: 0rem;
@@ -174,7 +174,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     z-index: var(--z-index-2);
-    background: var(--background-mode-500);
+    background: var(--background-theme-500);
     box-shadow: var(--shadow-bottom-light-4);
     will-change: opacity, transform;
     transform-origin: 0% 0%;
@@ -188,11 +188,11 @@
     outline: none;
 
     &:hover {
-      background: var(--background-mode-100);
+      background: var(--background-theme-100);
     }
 
     &:not(:hover):focus {
-      background: var(--theme-mode-100);
+      background: var(--color-xofttion-100);
     }
 
     .xft-ballot {
@@ -229,7 +229,7 @@
         width: 100%;
 
         &.caption-regular {
-          color: var(--color-mode-100);
+          color: var(--color-theme-100);
           white-space: initial;
         }
       }
@@ -246,7 +246,7 @@
     opacity: 0;
     z-index: var(--z-index-1);
     will-change: opacity;
-    background: var(--theme-mode-700);
+    background: var(--color-xofttion-700);
     transition: opacity 120ms 0ms var(--deceleration-curve),
       bottom 120ms 0ms var(--deceleration-curve);
   }

@@ -8,6 +8,8 @@
 */
 
 .xft-input-field {
+  --font-input: 0.95rem;
+
   position: relative;
   float: left;
   width: 100%;
@@ -15,7 +17,7 @@
   &__content {
     &--active {
       .xft-input-field__component {
-        color: var(--color-mode-500);
+        color: var(--color-theme-500);
       }
 
       .xft-input-field__value {
@@ -42,16 +44,16 @@
     outline: none;
     background: transparent;
     color: transparent;
-    font-size: var(--body-size);
+    font-size: var(--font-input);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-letter-spacing);
 
     &::placeholder {
-      color: var(--color-mode-100);
+      color: var(--color-theme-100);
     }
 
     &::selection {
-      background: var(--theme-mode-700);
+      background: var(--color-xofttion-700);
       color: var(--color-light-500);
     }
 
@@ -77,8 +79,8 @@
     pointer-events: none;
     overflow: hidden;
     white-space: nowrap;
-    color: var(--color-mode-500);
-    font-size: var(--body-size);
+    color: var(--color-theme-500);
+    font-size: var(--font-input);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-letter-spacing);
   }

@@ -1,0 +1,76 @@
+/*!
+ * Xofttion Breadcrumb Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Abr/2023
+*/
+
+.xft-breadcrumb {
+  display: -webkit-box;
+  width: 100%;
+  height: var(--sizing-36);
+  line-height: var(--sizing-36);
+  padding: 0rem var(--sizing-16);
+  box-sizing: border-box;
+  user-select: none;
+  overflow: auto;
+  overflow-y: hidden;
+  color: var(--color-theme-300);
+  font-weight: var(--font-weight-medium);
+
+  &::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+  }
+
+  &__label {
+    display: block;
+    height: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    font-weight: inherit;
+    color: inherit;
+    font-size: var(--body-size);
+    letter-spacing: var(--body-letter-spacing);
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      font-family: -xofttion-icons;
+      display: inline-block;
+      content: '\e911';
+      margin: 0rem var(--sizing-4);
+      cursor: default;
+      color: inherit;
+      font-size: var(--sizing-24);
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      vertical-align: top;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    &--active {
+      .xft-breadcrumb__label__a {
+        color: var(--color-xofttion-500);
+      }
+    }
+
+    &__a {
+      display: inline-block;
+      cursor: pointer;
+      color: var(--color-theme-300);
+
+      &:hover {
+        color: var(--color-xofttion-500);
+        text-decoration: underline;
+      }
+    }
+  }
+}

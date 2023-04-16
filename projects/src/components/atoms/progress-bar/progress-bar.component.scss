@@ -13,7 +13,7 @@
   width: 100%;
   height: var(--sizing-4);
   overflow: hidden;
-  background: var(--background-mode-300);
+  background: var(--background-theme-300);
 
   &__content {
     position: relative;
@@ -28,7 +28,7 @@
         top: 0rem;
         width: 0%;
         height: var(--sizing-4);
-        background: var(--gradient-mode-500);
+        background: var(--gradient-xofttion-500);
       }
 
       &::after {
@@ -50,7 +50,7 @@
     top: 0rem;
     width: 0%;
     height: var(--sizing-8);
-    background: var(--gradient-mode-500);
+    background: var(--gradient-xofttion-500);
     transition: width 320ms 0ms var(--standard-curve);
   }
 }

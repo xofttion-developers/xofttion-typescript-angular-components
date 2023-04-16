@@ -36,13 +36,13 @@
     color: var(--color-theme-300);
 
     &:hover {
-      background: var(--theme-mode-900);
+      background: var(--color-xofttion-900);
       color: var(--color-light-500);
     }
 
     &--selected {
       &:not(:hover) {
-        background: var(--theme-mode-500);
+        background: var(--color-xofttion-500);
         color: var(--color-light-500);
       }
     }

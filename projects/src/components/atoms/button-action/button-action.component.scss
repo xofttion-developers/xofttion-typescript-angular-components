@@ -18,7 +18,7 @@
   user-select: none;
   background: transparent;
   cursor: default;
-  color: var(--color-mode-300);
+  color: var(--color-theme-300);
 
   &::before {
     position: absolute;
@@ -29,7 +29,7 @@
     opacity: 0.32;
     visibility: hidden;
     border-radius: 50%;
-    background: var(--background-mode-300);
+    background: var(--background-theme-300);
     padding-top: calc(120% - var(--sizing-8));
     padding-left: calc(120% - var(--sizing-8));
     margin-top: calc(-60% + var(--sizing-4));
@@ -56,7 +56,7 @@
     margin-top: calc(var(--sizing-20) * -1);
     margin-left: calc(var(--sizing-20) * -1);
     border-radius: 50%;
-    background: var(--background-mode-300);
+    background: var(--background-theme-300);
     transform: scale(0);
     transition: transform 160ms 0ms var(--sharp-curve);
   }

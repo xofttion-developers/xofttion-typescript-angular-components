@@ -4,21 +4,21 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 14/Abr/2023
+ * Updated: 16/Abr/2023
 */
 
 .xft-button {
-  --button-hover-background: var(--theme-mode-100);
-  --button-hover-color: var(--theme-mode-100);
+  --button-hover-background: var(--color-xofttion-100);
+  --button-hover-color: var(--color-xofttion-100);
   --button-hover-border: none;
-  --button-ripple: var(--theme-mode-700);
+  --button-ripple: var(--color-xofttion-700);
 
   position: relative;
   float: left;
   padding: 0rem;
-  background: transparent;
   overflow: hidden;
   outline: none;
+  background: transparent;
 
   &:not(:disabled):not(:active) {
     .xft-button__content::before {
@@ -73,29 +73,29 @@
     }
 
     &--flat {
-      background: var(--theme-mode-100);
-      color: var(--theme-mode-500);
+      background: none;
+      color: var(--color-xofttion-500);
 
-      --button-hover-background: var(--theme-mode-300);
-      --button-hover-color: var(--color-light-500);
+      --button-hover-background: var(--color-xofttion-100);
+      --button-hover-color: var(--color-xofttion-500);
       --button-hover-border: none;
     }
 
     &--outline {
-      border: var(--border-2-theme-500);
       background: transparent;
-      color: var(--theme-mode-500);
+      color: var(--color-xofttion-500);
+      border: var(--border-2-xofttion-500);
 
-      --button-hover-background: var(--theme-mode-300);
-      --button-hover-color: var(--color-light-500);
-      --button-hover-border: var(--border-2-theme-900);
+      --button-hover-background: transparent;
+      --button-hover-color: var(--color-xofttion-700);
+      --button-hover-border: var(--border-2-xofttion-700);
     }
 
     &--raised {
-      background: var(--gradient-mode-500);
+      background: var(--gradient-xofttion-500);
       color: var(--color-light-500);
       
-      --button-hover-background: var(--theme-mode-900);
+      --button-hover-background: var(--color-xofttion-900);
       --button-hover-color: var(--color-light-500);
       --button-hover-border: none;
       --button-ripple: var(--color-light-500);
@@ -113,8 +113,8 @@
     padding: 0rem var(--sizing-4);
     margin: auto 0rem;
     font-size: 0.925rem;
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.875px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.925px;
   }
 }
 

@@ -16,7 +16,7 @@
 
   <xft-skeleton-text [active]="true">Daniel Castillo</xft-skeleton-text>
 
-  <button xft-button="raised" [disabled]="checked" xft-theme="info">
+  <button xft-button="raised" [disabled]="checked" xft-theme="info" (click)="onConfirmation()">
     <span>Registrar usuario</span>
   </button>
 
@@ -84,21 +84,10 @@
       >
         <div
           class="content xl-flex-col-12 lg-flex-col-8 md-flex-col-6 sm-flex-col-4"
-        >
-          <xft-text-field
-            [inputControl]="control"
-            placeholder="Nombre completo*"
-          >
-            Nombre completo<span>*</span>
-          </xft-text-field>
-        </div>
+        ></div>
         <div
           class="content xl-flex-col-6 lg-flex-col-4 md-flex-col-3 sm-flex-col-2"
-        >
-          <xft-money-field placeholder="Salario*" [inputControl]="salary">
-            Salario (COP)<span>*</span>
-          </xft-money-field>
-        </div>
+        ></div>
         <div
           class="content xl-flex-col-6 lg-flex-col-4 md-flex-col-3 sm-flex-col-2"
         >

@@ -18,14 +18,14 @@
     height: var(--sizing-24);
     box-sizing: border-box;
     border-radius: var(--sizing-12);
-    border: var(--border-2-mode-300);
+    border: var(--border-1-theme-300);
 
     &--checked {
-      border: var(--border-2-theme-500);
+      border: var(--border-1-xofttion-500);
 
       .xft-switch__component {
         left: 1.125rem;
-        background: var(--gradient-mode-500);
+        background: var(--gradient-xofttion-500);
       }
     }
 
@@ -37,11 +37,11 @@
 
   &__component {
     position: absolute;
-    top: var(--sizing-2);
-    left: var(--sizing-2);
+    top: calc(var(--sizing-2) + 1px);
+    left: calc(var(--sizing-2) + 1px);
     width: var(--sizing-16);
     height: var(--sizing-16);
-    background: var(--border-mode-300);
+    background: var(--border-theme-300);
     transition: left 160ms 0ms var(--standard-curve);
     border-radius: var(--sizing-12);
   }

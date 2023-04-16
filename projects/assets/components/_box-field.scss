@@ -14,26 +14,33 @@
   box-sizing: border-box;
 
   &__content {
-    --box-field-label-color: var(--color-mode-300);
-    --box-field-body-background: var(--background-mode-300);
-    --box-field-body-border: var(--border-2-mode-100);
+    --box-field-body-background: rgb(248, 248, 248, 1);
+    --box-field-label-color: var(--color-theme-300);
+    --box-field-body-border: var(--border-1-theme-100);
+    --box-field-body-shadow: none;
 
     transition: height 160ms 0ms var(--standard-curve);
     box-sizing: border-box;
 
     &--active {
-      --box-field-label-color: var(--theme-mode-500);
-      --box-field-body-background: var(--background-mode-500);
-      --box-field-body-border: var(--border-2-theme-500);
+      --box-field-body-background: var(--background-theme-500);
+      --box-field-label-color: var(--color-xofttion-500);
+      --box-field-body-border: var(--border-1-xofttion-500);
+      --box-field-body-shadow: 0px 0px 0px 3px var(--box-shadow-xofttion-500);
+
+      .xft-box-field__body {
+        box-shadow: var(--box-field-body-shadow);
+      }
     }
 
     &--error {
-      --box-field-label-color: var(--theme-danger-500);
-      --box-field-body-border: var(--border-2) solid var(--theme-danger-500);
+      --box-field-label-color: var(--color-danger-500);
+      --box-field-body-border: var(--border-1) solid var(--color-danger-500);
+      --box-field-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
     }
 
     &--disabled {
-      --box-field-body-background: var(--background-mode-500);
+      --box-field-body-background: var(--background-theme-500);
 
       .xft-box-field__label {
         opacity: 0.5;
@@ -63,7 +70,7 @@
     line-height: var(--smalltext-line-height);
 
     span {
-      color: var(--theme-danger-500);
+      color: var(--color-danger-500);
     }
   }
 
@@ -77,7 +84,7 @@
   }
 
   &__helper {
-    color: var(--color-mode-100);
+    color: var(--color-theme-100);
     padding: 0rem 0.625rem;
     box-sizing: border-box;
     margin-top: var(--sizing-4);
@@ -88,7 +95,7 @@
     line-height: var(--overline-line-height);
 
     &--error {
-      color: var(--theme-danger-500);
+      color: var(--color-danger-500);
     }
   }
 }
