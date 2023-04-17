@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 27/Ago/2022
+ * Updated: 16/Abr/2023
 */
 
 .xft-toolbar {
@@ -46,21 +46,22 @@
   }
 
   &__title {
+    color: var(--color-theme-500);
     height: var(--sizing-24);
     line-height: var(--sizing-24);
-    font-size: 1.075rem;
+    font-size: 1.0125rem;
     font-weight: var(--font-weight-bold);
   }
 
   &__subtitle {
-    color: var(--color-theme-300);
+    color: var(--color-theme-100);
   }
 
   &__breadcrumb {
     .xft-breadcrumb {
-      padding: 0rem;
       height: var(--sizing-20);
       line-height: var(--sizing-20);
+      padding: 0rem;
 
       label {
         font-size: var(--caption-size);

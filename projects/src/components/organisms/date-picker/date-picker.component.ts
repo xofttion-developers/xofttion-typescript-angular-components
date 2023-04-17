@@ -30,6 +30,8 @@ import {
 import { DatePickerForm } from './date-picker.form';
 import { DateListener, DateListenerType } from './date-utils';
 
+type OverlayDatePicker = ModalOverlayComponent<DatePickerComponent>;
+
 interface DatePickerStatus {
   disabled: boolean;
 }
@@ -76,17 +78,19 @@ export class DatePickerComponent
   @Output()
   public listener: EventEmitter<DateListener>;
 
-  private overlay?: ModalOverlayComponent<DatePickerComponent>;
+  private overlay?: OverlayDatePicker;
 
-  public value: Date;
+  protected value: Date;
 
-  public date: DatePickerForm;
+  protected date: DatePickerForm;
 
-  public subscriptions: Array<Subscription> = [];
+  protected subscriptions: Array<Subscription> = [];
 
-  public status: DatePickerStatus;
+  protected status: DatePickerStatus;
 
-  public visibility: ComponentVisibility;
+  protected visibility: ComponentVisibility;
+
+  protected xftTheme = 'none';
 
   private onChange = (_?: Date): void => undefined;
 
@@ -155,9 +159,7 @@ export class DatePickerComponent
     this.changedDetectorRef.detectChanges();
   }
 
-  public ngOnOverlay(
-    overlay: ModalOverlayComponent<DatePickerComponent>
-  ): void {
+  public ngOnOverlay(overlay: OverlayDatePicker): void {
     this.overlay = overlay;
   }
 
@@ -171,6 +173,10 @@ export class DatePickerComponent
 
   public get month(): string {
     return MONTHS_NAME[this.value.getMonth()];
+  }
+
+  public setTheme(xftTheme: string): void {
+    this.xftTheme = xftTheme;
   }
 
   public onClickDay(): void {
@@ -234,8 +240,8 @@ export class DatePickerComponent
       ? (this.minDate as Date)
       : (this.maxDate as Date);
 
-    this.onChange(this.value);
     this.onTouch(this.value);
+    this.onChange(this.value);
   }
 
   private isOverflow(date: Date): boolean {

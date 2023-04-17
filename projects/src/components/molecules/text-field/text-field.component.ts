@@ -35,7 +35,7 @@ export class TextFieldComponent implements OnInit {
   @Input()
   public suffixIcon?: string;
 
-  public status: InputFieldStatus;
+  protected status: InputFieldStatus;
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {
     this.status = {

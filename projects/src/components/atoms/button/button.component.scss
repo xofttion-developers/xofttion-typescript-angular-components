@@ -86,9 +86,9 @@
       color: var(--color-xofttion-500);
       border: var(--border-2-xofttion-500);
 
-      --button-hover-background: transparent;
-      --button-hover-color: var(--color-xofttion-700);
-      --button-hover-border: var(--border-2-xofttion-700);
+      --button-hover-background: var(--color-xofttion-100);
+      --button-hover-color: var(--color-xofttion-500);
+      --button-hover-border: var(--border-2-xofttion-500);
     }
 
     &--raised {
@@ -113,8 +113,8 @@
     padding: 0rem var(--sizing-4);
     margin: auto 0rem;
     font-size: 0.925rem;
-    font-weight: var(--font-weight-medium);
-    letter-spacing: 0.925px;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.75px;
   }
 }
 

@@ -9,6 +9,7 @@ import { InputFieldComponentModule } from './input-field/input-field.component.m
 import { ProgressBarComponentModule } from './progress-bar/progress-bar.component.module';
 import { ProgressCircularComponentModule } from './progress-circular/progress-circular.component.module';
 import { RadiobuttonComponentModule } from './radiobutton/radiobutton.component.module';
+import { SidenavElementComponentModule } from './sidenav-element/sidenav-element.component.module';
 import { SkeletonTextComponentModule } from './skeleton-text/skeleton-text.component.module';
 import { SwitchComponentModule } from './switch/switch.component.module';
 
@@ -23,6 +24,7 @@ const components = [
   ProgressBarComponentModule,
   ProgressCircularComponentModule,
   RadiobuttonComponentModule,
+  SidenavElementComponentModule,
   SkeletonTextComponentModule,
   SwitchComponentModule
 ];
@@ -31,4 +33,4 @@ const components = [
   imports: components,
   exports: components
 })
-export class AtomsComponentsModule {}
+export class XofttionComponentsAtomsModule {}

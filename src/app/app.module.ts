@@ -4,22 +4,18 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { AtomsComponentsModule } from 'projects/src/components/atoms/atoms.module';
-import { MoleculesComponentsModule } from 'projects/src/components/molecules/molecules.module';
-import { OrganismsComponentsModule } from 'projects/src/components/organisms/organisms.module';
+import { AppRouting } from './app.component.routing';
 
 registerLocaleData(localeCo);
 
 @NgModule({
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AtomsComponentsModule,
-    MoleculesComponentsModule,
-    OrganismsComponentsModule
+    AppRouting
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
   providers: [{ provide: LOCALE_ID, useValue: 'es-CO' }]
 })
 export class AppModule {}

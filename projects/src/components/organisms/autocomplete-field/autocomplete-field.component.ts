@@ -66,9 +66,9 @@ export class AutocompleteFieldComponent
 
   private coindicence = '';
 
-  public description = '';
+  protected description = '';
 
-  public coincidences: Array<ListFieldElement> = [];
+  protected coincidences: Array<ListFieldElement> = [];
 
   public get isSelected(): boolean {
     return !!this.value;

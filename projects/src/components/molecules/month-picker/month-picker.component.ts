@@ -48,15 +48,15 @@ export class MonthPickerComponent
   @Input()
   public maxDate?: Date;
 
-  public value: number;
+  protected value: number;
 
-  public months = MONTHS;
+  protected months = MONTHS;
 
-  public status: MonthPickerStatus;
+  protected status: MonthPickerStatus;
 
-  public onChange = (_?: number): void => undefined;
+  private onChange = (_?: number): void => undefined;
 
-  public onTouch = (_?: number): void => undefined;
+  private onTouch = (_?: number): void => undefined;
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {
     this.value = this.date.getMonth();
@@ -98,11 +98,11 @@ export class MonthPickerComponent
     return this.isOverflow(this.date, month.value);
   }
 
-  public onClickMonth(monthModel: MonthModel): void {
-    this.onChange(monthModel.value);
-    this.onTouch(monthModel.value);
+  public onClickMonth({ value }: MonthModel): void {
+    this.approvedValue(value);
 
-    this.approvedValue(monthModel.value);
+    this.onTouch(value);
+    this.onChange(value);
   }
 
   private changeStatusDate(changes: SimpleChanges): void {

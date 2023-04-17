@@ -46,15 +46,15 @@ export class ListFieldComponent implements OnInit, ControlValueAccessor {
 
   protected higher = false;
 
-  public value?: ListFieldElement;
+  protected value?: ListFieldElement;
 
-  public suggestion = '';
+  protected suggestion = '';
 
-  public status: ListFieldStatus;
+  protected status: ListFieldStatus;
 
-  public onChange = (_?: unknown): void => undefined;
+  protected onChange = (_?: unknown): void => undefined;
 
-  public onTouch = (_?: unknown): void => undefined;
+  protected onTouch = (_?: unknown): void => undefined;
 
   constructor(protected ref: ElementRef, protected renderer: Renderer2) {
     this.status = {
@@ -131,8 +131,8 @@ export class ListFieldComponent implements OnInit, ControlValueAccessor {
   protected setDefineValue(element: ListFieldElement): void {
     this.setValue(element);
 
-    this.onChange(element.value);
     this.onTouch(element.value);
+    this.onChange(element.value);
   }
 
   protected setValue(element?: ListFieldElement): void {

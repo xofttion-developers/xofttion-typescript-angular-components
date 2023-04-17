@@ -24,7 +24,7 @@ export class ButtonComponent implements OnInit {
   @Input()
   public suffixIcon?: string;
 
-  public classButton = 'xft-button__content--flat';
+  protected classButton = 'xft-button__content--flat';
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {}
 

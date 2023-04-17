@@ -5,6 +5,8 @@ import { DayPickerComponentModule } from './day-picker/day-picker.component.modu
 import { MoneyFieldComponentModule } from './money-field/money-field.component.module';
 import { MonthPickerComponentModule } from './month-picker/month-picker.component.module';
 import { RadiobuttonLabelComponentModule } from './radiobutton-label/radiobutton-label.component.module';
+import { SidenavMenuComponentModule } from './sidenav-menu/sidenav-menu.component.module';
+import { SidenavProfileComponentModule } from './sidenav-profile/sidenav-profile.component.module';
 import { SwitchLabelComponentModule } from './switch-label/switch-label.component.module';
 import { TextFieldComponentModule } from './text-field/text-field.component.module';
 import { ToolbarComponentModule } from './toolbar/toolbar.component.module';
@@ -17,6 +19,8 @@ const components = [
   MoneyFieldComponentModule,
   MonthPickerComponentModule,
   RadiobuttonLabelComponentModule,
+  SidenavMenuComponentModule,
+  SidenavProfileComponentModule,
   SwitchLabelComponentModule,
   TextFieldComponentModule,
   ToolbarComponentModule,
@@ -27,4 +31,4 @@ const components = [
   imports: components,
   exports: components
 })
-export class MoleculesComponentsModule {}
+export class XofttionComponentsMoleculesModule {}

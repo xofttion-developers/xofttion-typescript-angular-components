@@ -13,3 +13,5 @@ export * from './popup/popup.component.module';
 export * from './popup/popup.component.service';
 export * from './select-field/select-field.component';
 export * from './select-field/select-field.component.module';
+export * from './sidenav/sidenav.component';
+export * from './sidenav/sidenav.component.module';

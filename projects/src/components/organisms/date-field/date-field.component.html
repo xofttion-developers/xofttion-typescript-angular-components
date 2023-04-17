@@ -3,6 +3,7 @@
   [class.xft-box-field--active]="status.active"
   [class.xft-box-field--disabled]="status.disabled"
   [class.xft-date-field--selected]="!!value"
+  [attr.xft-theme]="xftTheme"
 >
   <label class="xft-box-field__label" [for]="elementId" *ngIf="label">
     <ng-content></ng-content>

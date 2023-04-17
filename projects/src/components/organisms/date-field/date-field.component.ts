@@ -61,7 +61,7 @@ export class DateFieldComponent
   public maxDate?: Date;
 
   @Input()
-  public xftTheme = 'default';
+  public xftTheme = 'none';
 
   private modal?: ModalOverlayComponent<DatePickerComponent>;
 
@@ -99,6 +99,8 @@ export class DateFieldComponent
     this.modal = this.modalService.build(DatePickerComponent);
 
     this.setValue(this.dateControl.value);
+
+    this.modal.children.setTheme(this.xftTheme);
 
     this.modal.addListener(({ value }) => {
       if (value) {

@@ -37,7 +37,7 @@ export class RadiobuttonLabelComponent implements OnInit, ControlValueAccessor {
   @Input()
   public value: any = null;
 
-  public disabled = false;
+  protected disabled = false;
 
   private onChange = (_?: any): void => undefined;
 

@@ -1,4 +1,8 @@
-<div class="xft-popup__content" [class.xft-popup__content--visible]="visible">
+<div
+  class="xft-popup__content"
+  [class.xft-popup__content--visible]="visible"
+  [attr.xft-theme]="config?.theme"
+>
   <div
     class="xft-popup__component"
     [class.xft-popup__component--visible]="visible"
@@ -24,11 +28,11 @@
 
     <div class="xft-popup__footer">
       <div class="xft-popup__footer__actions">
-        <button xft-button="raised" (click)="onApproved()">
-          <span>{{ config?.approved?.label || 'Aceptar' }}</span>
-        </button>
         <button *ngIf="config?.reject" xft-button="flat" (click)="onReject()">
           <span>{{ config?.reject?.label }}</span>
+        </button>
+        <button xft-button="raised" (click)="onApproved()">
+          <span>{{ config?.approved?.label || 'Aceptar' }}</span>
         </button>
       </div>
     </div>

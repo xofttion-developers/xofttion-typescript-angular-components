@@ -1,0 +1,168 @@
+/*!
+ * Xofttion Sidenav Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Abr/2023
+*/
+
+.xft-sidenav {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  width: 0%;
+  height: 100vh;
+  z-index: var(--z-index-16);
+  box-sizing: border-box;
+  transition: width 240ms 0ms var(--standard-curve);
+
+  &--hide {
+    width: 4rem;
+
+    .xft-sidenav-profile {
+      .xft-ballot {
+        &__content {
+          justify-content: center;
+          padding: 0rem;
+        }
+
+        &__component {
+          display: none;
+        }
+      }
+    }
+
+    .xft-sidenav-element {
+      &__content:hover:not(.xft-sidenav-element__content--skeleton) {
+        label {
+          display: block;
+        }
+      }
+
+      .xft-icon {
+        margin: auto;
+      }
+
+      label {
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: calc(100% + var(--sizing-12));
+        width: auto;
+        padding: var(--sizing-8);
+        border-radius: var(--sizing-4);
+        transform: translateY(-50%);
+        background: var(--background-theme-100);
+        font-size: var(--smalltext-size);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: var(--smalltext-letter-spacing);
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__component {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: var(--sizing-8) 0rem;
+    z-index: var(--z-index-4);
+    box-sizing: border-box;
+    will-change: transform;
+    transform: translateX(0%);
+    background: var(--background-theme-100);
+    transition: transform 240ms 0ms var(--standard-curve);
+  }
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-index-2);
+    opacity: 0;
+    background: var(--backdrop-xofttion-500);
+    transition: opacity 240ms 0ms var(--standard-curve);
+  }
+}
+
+@media only screen and (min-width: 45rem) {
+  .xft-sidenav {
+    width: 17.5rem;
+
+    &:not(.xft-sidenav--condense) + .xft-app__body {
+      left: 17.5rem;
+      width: calc(100% - 17.5rem);
+
+      .xft-list-field__suggestions--sheet.xft-list-field__suggestions--show {
+        left: 17.5rem;
+        width: calc(100% - 17.5rem);
+      }
+    }
+
+    &--hide:not(.xft-sidenav--condense) {
+      width: 4rem;
+
+      .xft-sidenav__component {
+        overflow: initial;
+      }
+
+      & + .xft-app__body {
+        left: 4rem;
+        width: calc(100% - 4rem);
+
+        .xft-list-field__suggestions--sheet.xft-list-field__suggestions--show {
+          left: 4rem;
+          width: calc(100% - 4rem);
+        }
+      }
+    }
+
+    &--condense {
+      width: 0%;
+    }
+  }
+}
+
+@media only screen and (max-width: 45rem) {
+  .xft-sidenav {
+    visibility: hidden;
+    width: 100%;
+    transition: visibility 240ms 0ms var(--standard-curve);
+
+    &--show {
+      visibility: visible;
+      z-index: var(--z-index-32);
+
+      .xft-sidenav__component {
+        transform: translateX(0%);
+      }
+
+      .xft-sidenav__backdrop {
+        opacity: 0.86;
+      }
+    }
+
+    &--hide {
+      width: 0%;
+    }
+
+    &--condense {
+      width: 0%;
+    }
+
+    &__component {
+      width: calc(100% - 4rem);
+      max-width: 17.5rem;
+      transform: translateX(-100%);
+    }
+  }
+}

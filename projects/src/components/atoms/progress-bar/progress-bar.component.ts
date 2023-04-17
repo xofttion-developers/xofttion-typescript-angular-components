@@ -23,7 +23,7 @@ export class ProgressBarComponent implements OnInit, OnChanges {
   @Input()
   public width = 0;
 
-  public percentage = '0%';
+  protected percentage = '0%';
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {}
 

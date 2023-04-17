@@ -27,9 +27,9 @@ export class SwitchLabelComponent implements OnInit, ControlValueAccessor {
   @Input()
   public elementId?: string;
 
-  public disabled = false;
+  protected disabled = false;
 
-  public value = false;
+  protected value = false;
 
   private onChange = (_?: boolean): void => undefined;
 

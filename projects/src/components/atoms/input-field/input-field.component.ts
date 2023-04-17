@@ -60,9 +60,9 @@ export class InputFieldComponent implements OnInit, ControlValueAccessor {
   @Output()
   public status: EventEmitter<InputFieldStatus>;
 
-  public statusField: InputFieldStatus;
+  protected statusField: InputFieldStatus;
 
-  public input = '';
+  protected input = '';
 
   private onChange = (_?: string): void => undefined;
 

@@ -41,13 +41,13 @@ export class YearPickerComponent implements OnInit, ControlValueAccessor {
 
   private yearSelect: YearModel;
 
-  public years: Array<YearModel> = [];
+  protected years: Array<YearModel> = [];
 
-  public minYearRange: number;
+  protected minYearRange: number;
 
-  public maxYearRange: number;
+  protected maxYearRange: number;
 
-  public status: YearPickerStatus;
+  protected status: YearPickerStatus;
 
   private onChange = (_?: number): void => undefined;
 
@@ -142,10 +142,10 @@ export class YearPickerComponent implements OnInit, ControlValueAccessor {
   private recalculateValue(value: number): void {
     const valueYear = this.isOverflowMin(value) ? this.minYear : this.maxYear;
 
-    this.onChange(valueYear);
-    this.onTouch(valueYear);
-
     this.approvedValue(valueYear);
+
+    this.onTouch(valueYear);
+    this.onChange(valueYear);
   }
 
   private renderComponent(year: number): void {

@@ -52,9 +52,9 @@ export class MoneyFieldComponent implements OnInit, OnDestroy {
 
   private subscription?: Subscription;
 
-  public value = '';
+  protected value = '';
 
-  public status: InputFieldStatus;
+  protected status: InputFieldStatus;
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {
     this.status = {

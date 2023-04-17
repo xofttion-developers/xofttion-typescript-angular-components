@@ -5,6 +5,7 @@ import { DatePickerComponentModule } from './date-picker/date-picker.component.m
 import { ModalComponentModule } from './modal/modal.component.module';
 import { PopupComponentModule } from './popup/popup.component.module';
 import { SelectFieldComponentModule } from './select-field/select-field.component.module';
+import { SidenavComponentModule } from './sidenav/sidenav.component.module';
 
 const components = [
   AutocompleteFieldComponentModule,
@@ -12,11 +13,12 @@ const components = [
   DatePickerComponentModule,
   ModalComponentModule,
   PopupComponentModule,
-  SelectFieldComponentModule
+  SelectFieldComponentModule,
+  SidenavComponentModule
 ];
 
 @NgModule({
   imports: components,
   exports: components
 })
-export class OrganismsComponentsModule {}
+export class XofttionComponentsOrganismsModule {}

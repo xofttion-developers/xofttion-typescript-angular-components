@@ -44,19 +44,19 @@ export class DayPickerComponent
   @Input()
   public maxDate?: Date;
 
-  public value: number;
+  protected value: number;
 
-  public status: DayPickerStatus;
+  protected status: DayPickerStatus;
 
-  public titles = DAYS_NAME_MIN;
+  protected titles = DAYS_NAME_MIN;
 
-  public weeks: Array<WeekModel> = [];
+  protected weeks: Array<WeekModel> = [];
 
-  private dateStart: Date = new Date();
+  private dateStart = new Date();
 
-  public onChange = (_?: number): void => undefined;
+  private onChange = (_?: number): void => undefined;
 
-  public onTouch = (_?: number): void => undefined;
+  private onTouch = (_?: number): void => undefined;
 
   constructor(private ref: ElementRef, private renderer: Renderer2) {
     this.date = new Date();
@@ -88,12 +88,12 @@ export class DayPickerComponent
     return dayModel.value ? this.isOverflow(this.date, dayModel.value) : true;
   }
 
-  public onClickDay(dayModel: DayModel): void {
-    if (dayModel.value) {
-      this.onChange(dayModel.value);
-      this.onTouch(dayModel.value);
+  public onClickDay({ value }: DayModel): void {
+    if (value) {
+      this.setValue(value);
 
-      this.setValue(dayModel.value);
+      this.onTouch(value);
+      this.onChange(value);
     }
   }
 
