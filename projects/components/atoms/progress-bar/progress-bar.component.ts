@@ -8,7 +8,7 @@ import {
   SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
-import { createDOM } from 'projects/src/utils';
+import { createDOM } from 'projects/utils';
 
 @Component({
   selector: 'xft-progress-bar',

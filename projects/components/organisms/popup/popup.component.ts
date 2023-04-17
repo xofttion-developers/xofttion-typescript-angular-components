@@ -6,7 +6,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { PopupConfig } from './popup.config';
-import { createDOM } from 'projects/src/utils';
+import { createDOM } from 'projects/utils';
 
 @Component({
   selector: 'xft-popup',

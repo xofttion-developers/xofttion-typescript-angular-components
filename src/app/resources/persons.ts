@@ -1,5 +1,5 @@
 import { getInitials, hasPattern } from '@xofttion/utils';
-import { ListFieldElement } from 'projects/src/components/organisms';
+import { ListFieldElement } from 'projects/components/organisms';
 
 class Person {
   constructor(

@@ -14,7 +14,7 @@
     "importHelpers": true,
     "lib": ["es2020", "dom"],
     "paths": {
-      "@xofttion/components/*": ["projects/src/app/components/*"]
+      "@xofttion/components/*": ["projects/app/components/*"]
     },
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

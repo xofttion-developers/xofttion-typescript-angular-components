@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { PopupComponentService } from 'projects/src/components/organisms';
+import { PopupComponentService } from 'projects/components/organisms';
 import { personsElement } from 'src/app/resources/persons';
 
 @Component({

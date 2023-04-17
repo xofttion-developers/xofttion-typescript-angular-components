@@ -5,7 +5,7 @@ import { HomePageRouting } from './home.page.routing';
 import {
   SidenavComponentModule,
   ToolbarComponentModule
-} from 'projects/src/components';
+} from 'projects/components';
 
 @NgModule({
   declarations: [HomePage],

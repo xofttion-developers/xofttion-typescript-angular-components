@@ -12,7 +12,7 @@ import {
   FormControl,
   NG_VALUE_ACCESSOR
 } from '@angular/forms';
-import { createDOM } from 'projects/src/utils';
+import { createDOM } from 'projects/utils';
 
 @Component({
   selector: 'xft-radiobutton-label',

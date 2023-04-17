@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { InputFieldStatus, InputType } from '../../atoms';
-import { createDOM } from 'projects/src/utils';
+import { createDOM } from 'projects/utils';
 
 @Component({
   selector: 'xft-text-field',

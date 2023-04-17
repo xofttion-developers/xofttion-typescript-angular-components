@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MonthModel, MONTHS } from './month-utils';
-import { createDOM } from 'projects/src/utils';
+import { createDOM } from 'projects/utils';
 
 interface MonthPickerStatus {
   disabled: boolean;
