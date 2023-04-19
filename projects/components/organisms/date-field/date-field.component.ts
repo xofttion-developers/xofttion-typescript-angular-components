@@ -19,7 +19,7 @@ import {
   ModalComponentService,
   ModalOverlayComponent
 } from '../modal/modal.component.service';
-import { createDOM } from 'projects/utils';
+import { createDOM } from '../../../utils';
 
 interface DateFieldStatus {
   active: boolean;

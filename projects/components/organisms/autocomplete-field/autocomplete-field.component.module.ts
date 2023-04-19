@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { AutocompleteFieldComponent } from './autocomplete-field.component';
 import {
   ButtonActionComponentModule,
@@ -10,6 +10,7 @@ import {
 import { BallotComponentModule } from '../../molecules';
 
 @NgModule({
+  declarations: [AutocompleteFieldComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -18,7 +19,6 @@ import { BallotComponentModule } from '../../molecules';
     ButtonActionComponentModule,
     ProgressBarComponentModule
   ],
-  declarations: [AutocompleteFieldComponent],
   exports: [AutocompleteFieldComponent]
 })
 export class AutocompleteFieldComponentModule {}
